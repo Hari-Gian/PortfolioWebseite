@@ -24,11 +24,73 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    {children}
+
+    <header className="">
+
+    </header>
+
+    {/*footer*/}
+    {/* Footer */}
+    <footer className="w-full bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900 text-gray-100 py-8 mt-8">
+        <div
+            className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+
+            {/* Kontakt Links - Zentriert und untereinander */}
+            <div className="flex flex-col justify-center items-center space-y-4">
+                <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors duration-300"
+                >
+                    GitHub ↗
+                </a>
+                <a
+                    href="mailto:harigian545@gmail.com"
+                    className="hover:text-white transition-colors duration-300"
+                >
+                    Email ↗
+                </a>
+                <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors duration-300"
+                >
+                    LinkedIn ↗
+                </a>
+            </div>
+
+            {/* Branding */}
+            <div className="text-center md:text-left">
+                <h2 className="text-2xl font-extrabold text-white">Create Next App</h2>
+                <p className="text-sm text-gray-300">
+                    &copy; {new Date().getFullYear()} Alle Rechte vorbehalten.
+                </p>
+            </div>
+
+            {/* Links */}
+            <div className="flex flex-col space-y-4">
+                <a
+                href="#impressum"
+                className="text-gray-300 text-lg hover:text-white transition-colors duration-300"
+                >
+                Impressum
+                </a>
+                <a
+                    href="#datenschutz"
+                    className="text-gray-300 text-lg hover:text-white transition-colors duration-300"
+                >
+                Datenschutz
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    </body>
     </html>
   );
 }
