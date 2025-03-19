@@ -27,11 +27,12 @@ export default function RootLayout({
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
     {children}
 
-    <header className="">
-
+    <header
+        className="w-[50%] h-16 bg-purple-600 rounded-full flex justify-center items-center absolute top-0 left-1/2 transform -translate-x-1/2">
+        <h1 className="text-white text-lg sm:text-xl md:text-3xl font-extrabold">Willkommen auf meiner Seite</h1>
     </header>
 
-    {/*footer*/}
+
     {/* Footer */}
     <footer className="w-full bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900 text-gray-100 py-8 mt-8">
         <div
@@ -108,15 +109,15 @@ export default function RootLayout({
             <div className="flex flex-col space-y-4">
                 <a
                     href="#impressum"
-                className="text-gray-300 text-lg hover:text-white transition-colors duration-300"
+                    className="text-gray-300 text-lg hover:text-white transition-colors duration-300"
                 >
-                Impressum
+                    Impressum
                 </a>
                 <a
                     href="#datenschutz"
                     className="text-gray-300 text-lg hover:text-white transition-colors duration-300"
                 >
-                Datenschutz
+                    Datenschutz
                 </a>
             </div>
         </div>
