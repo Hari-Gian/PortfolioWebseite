@@ -5,6 +5,8 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import CutoutTextLoader from "../others/loadingscreen"
 import React from "react";
+import Home from "../WebseiteKomponenten/home";
+import Aboutme from "../WebseiteKomponenten/aboutme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,19 +25,22 @@ export const metadata: Metadata = {
 
 
 
-export default function RootLayout(){
+export default function RootLayout() {
   return (
     <html lang="en">
-    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-
-
-    < Header />
-
-    < Footer />
-
-    </body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="min-h-screen bg-gradient-to-r from-blue-300 to-purple-800 flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            <Home />
+            <Aboutme />
+          </main>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
+
 
 
