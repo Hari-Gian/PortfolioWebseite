@@ -1,18 +1,48 @@
-export default function Home() {
-    return (
-        <div className="flex justify-center items-center h-screen bg-gradient-to-r ">
-            <div className="flex-shrink-0 w-1/5">
-                <img
-                    src="https://placehold.co/100x100"
-                    alt="Bild von mir"
-                    className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-            </div>
+"use client";
 
-            <div className="w-1/4 flex justify-center items-center">
-                <h1 className="text-7xl font-extrabold text-white drop-shadow-xl text-center">
-                    Home
-                </h1>
+import { MapPin } from "lucide-react";
+import { useState } from "react";
+
+export default function Home() {
+
+    const [hovered, setHovered] = useState<boolean>(false);
+
+    return (
+        <div className="flex justify-center items-center h-screen bg-gradient-to-r">
+            <div className="flex items-center gap-6">
+
+                <div className="flex-shrink-0 w-1/3">
+                    <img
+                        src="https://placehold.co/150x150"
+                        alt="Bild von mir"
+                        className="w-40 h-40 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 object-cover rounded-2xl shadow-2xl"
+                    />
+                </div>
+
+                <div className="w-2/5 flex flex-col justify-start">
+
+                    <h1
+                        className={`text-9xl sm:text-8xl md:text-7xl lg:text-6xl font-extrabold text-white drop-shadow-xl text-left whitespace-nowrap 
+                            transform transition-all duration-300 ease-in-out ${hovered ? 'scale-110 translate-z-10' : ''}`}
+                        onMouseEnter={() => setHovered(true)} // Hover ein
+                        onMouseLeave={() => setHovered(false)} // Hover aus
+                    >
+                        Hari Gian
+                    </h1>
+
+                    <div className="flex items-center mt-2 space-x-2 text-gray-300 text-sm">
+                        <MapPin className="w-5 h-5 text-pink-400"/> {/* Location-Icon */}
+                        <a
+                            href="https://www.google.com/maps?q=47.269786,8.644454"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                        >
+                            Meilen, Schweiz
+                        </a>
+                    </div>
+
+                </div>
             </div>
         </div>
     );
