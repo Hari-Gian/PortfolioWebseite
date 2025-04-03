@@ -5,7 +5,6 @@ export default function Footer() {
             <div
                 className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
 
-                {/* Kontakt Links - Zentriert und untereinander */}
                 <div className="flex flex-col justify-center items-center space-y-4">
                     <a
                         className="text-white transition-colors duration text-lg"
@@ -37,7 +36,6 @@ export default function Footer() {
 
                 </div>
 
-                {/* Kontakt Links - Zentriert und untereinander */}
                 <div className="flex flex-col justify-center items-center space-y-4">
                     <a
                         className="text-white transition-colors duration text-lg"
