@@ -8,11 +8,11 @@ export default function Home() {
     const [hovered, setHovered] = useState<boolean>(false);
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gradient-to-r">
+        <div className="flex justify-center items-center h-screen bg-gradient-to-r absolute top-0 left-0 right-0 bottom-0">
             <div className="flex items-center gap-6">
 
                 <div className="flex-shrink-0 w-1/3">
-                    <img
+                <img
                         src="https://placehold.co/150x150"
                         alt="Bild von mir"
                         className="w-40 h-40 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 object-cover rounded-2xl shadow-2xl"

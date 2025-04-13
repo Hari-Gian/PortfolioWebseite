@@ -13,7 +13,7 @@ export default function ScrollLinked() {
         <>
             <motion.div
                 id="scroll-indicator"
-                className="fixed top-0 left-0 right-0 h-[4px] bg-pink-500 origin-left"
+                className="fixed top-0 left-0 right-0 h-[6px] bg-blue-400 origin-left"
                 style={{ scaleX: scrollYProgress, zIndex: 50 }}
             />
             <main ref={containerRef} className="min-h-screen">

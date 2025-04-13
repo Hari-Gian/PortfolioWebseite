@@ -7,7 +7,7 @@ import CutoutTextLoader from "../others/loadingscreen"
 import React from "react";
 import Home from "../WebseiteKomponenten/home";
 import Aboutme from "../WebseiteKomponenten/aboutme";
-import ScrollLinked from "@/others/scroll";
+/*import ScrollLinked from "@/others/scroll"; */
 
 
 const geistSans = Geist({
@@ -31,21 +31,23 @@ export default function RootLayout() {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-
-      <ScrollLinked />
-
-        <div className="min-h-screen bg-gradient-to-r from-blue-300 to-purple-800 flex flex-col">
-          <Header />
-          <main className="flex-grow">
-            <Home />
-            <Aboutme />
-          </main>
+        <div className="flex flex-col min-h-screen">
+          <div className="flex-grow">
+            <div className='h-screen mb-12 bg-fixed bg-center bg-cover '>
+              <Header />
+              <main>
+                <Home />
+                <Aboutme />
+              </main>
+            </div>
+          </div>
           <Footer />
         </div>
       </body>
     </html>
   );
 }
+
 
 
 
