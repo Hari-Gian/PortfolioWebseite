@@ -133,14 +133,14 @@ const Navbar = () => {
 
   // Navigation links with custom shimmer per item
   const navItems = [
-    { label: "Home", href: "#home", duration: 2, spread: 1.5 },
-    { label: "Projects", href: "#projects", duration: 3, spread: 2 },
-    { label: "About Me", href: "#aboutme", duration: 2.5, spread: 1.8 },
-    { label: "Contact", href: "#contact", duration: 3.2, spread: 2.2 },
+    { label: "Home", href: "#home", duration: 4, spread: 2 },
+    { label: "Projects", href: "#projects", duration: 4, spread: 2 },
+    { label: "About Me", href: "#aboutme", duration: 4, spread: 2 },
+    { label: "Contact", href: "#contact", duration: 4, spread: 2 },
   ];
 
   return (
-      <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-gray-50 border-b shadow-sm"}`}>
+      <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-gray-100 border-b shadow-sm"}`}>
         <div className={`max-w-6xl mx-auto flex items-center ${isScrolled ? "justify-center" : "justify-between"} p-6`}>
           {/* Logo */}
           {!isScrolled && (
@@ -180,7 +180,7 @@ const Navbar = () => {
                           <TextShimmer
                               duration={duration}
                               spread={spread}
-                              className="text-xl px-4 py-2 rounded-md hover:text-blue-700 hover:bg-blue-300 transition-all duration-300 ease-in-out"
+                              className="text-xl px-4 py-2 rounded-md hover:text-black-800 hover:bg-black-300 transition-all duration-300 ease-in-out"
                           >
                             {label}
                           </TextShimmer>
