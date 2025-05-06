@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion } from "framer-motion";
+import {Moon, Sun, Send } from"lucide-react"
+const [isDarkMode, setDarkMode] = React.useState(true);
 
 // Utility function for class names
 const cn = (...classes: string[]) => {
@@ -28,6 +30,14 @@ function TextShimmer({
     const dynamicSpread = useMemo(() => {
         return typeof children === 'string' ? children.length * spread : 10 * spread;
     }, [children, spread]);
+
+    React.useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
+  }, [isDarkMode])
 
     return (
         <motion.h1
@@ -150,7 +160,8 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-gray-100 border-b shadow-sm"}`}>
-            <div className={`max-w-6xl mx-auto flex items-center ${isScrolled ? "justify-center" : "justify-between"} p-6`}>
+            <div
+                className={`max-w-6xl mx-auto flex items-center ${isScrolled ? "justify-center" : "justify-between"} p-6`}>
                 {/* Logo */}
                 {!isScrolled && (
                     <Link href="/">
@@ -163,9 +174,11 @@ const Navbar = () => {
                 {/* Mobile toggle */}
                 {!isScrolled && (
                     <button onClick={handleNav} className="sm:hidden p-2 z-20">
-                        <div className={`w-6 h-0.5 mb-1 bg-current transition-all ${nav ? "rotate-45 translate-y-1.5" : ""}`} />
-                        <div className={`w-6 h-0.5 mb-1 bg-current transition-all ${nav ? "opacity-0" : ""}`} />
-                        <div className={`w-6 h-0.5 bg-current transition-all ${nav ? "-rotate-45 -translate-y-1.5" : ""}`} />
+                        <div
+                            className={`w-6 h-0.5 mb-1 bg-current transition-all ${nav ? "rotate-45 translate-y-1.5" : ""}`}/>
+                        <div className={`w-6 h-0.5 mb-1 bg-current transition-all ${nav ? "opacity-0" : ""}`}/>
+                        <div
+                            className={`w-6 h-0.5 bg-current transition-all ${nav ? "-rotate-45 -translate-y-1.5" : ""}`}/>
                     </button>
                 )}
 
@@ -174,16 +187,16 @@ const Navbar = () => {
                     {isScrolled ? (
                         <ul
                             className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white px-4 py-2"
-                            onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
+                            onMouseLeave={() => setPosition((pv) => ({...pv, opacity: 0}))}
                         >
-                            {navItems.map(({ label, href }) => (
+                            {navItems.map(({label, href}) => (
                                 <Tab key={label} href={href}>{label}</Tab>
                             ))}
-                            <Cursor position={position} />
+                            <Cursor position={position}/>
                         </ul>
                     ) : (
-                        <ul className="flex space-x-8" style={{ color: textColor }}>
-                            {navItems.map(({ label, href, duration, spread }) => (
+                        <ul className="flex space-x-8" style={{color: textColor}}>
+                            {navItems.map(({label, href, duration, spread}) => (
                                 <li key={label} className="px-2">
                                     <Link href={href}>
                                         <TextShimmer
@@ -201,10 +214,12 @@ const Navbar = () => {
                 </div>
             </div>
 
+
             {/* Mobile Menu */}
-            <div className={`sm:hidden fixed inset-0 bg-gray-50/95 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ${nav ? "opacity-100 z-10" : "opacity-0 -z-10"}`}>
+            <div
+                className={`sm:hidden fixed inset-0 bg-gray-50/95 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ${nav ? "opacity-100 z-10" : "opacity-0 -z-10"}`}>
                 <ul className="text-center space-y-12">
-                    {navItems.map(({ label, href, duration, spread }) => (
+                    {navItems.map(({label, href, duration, spread}) => (
                         <li key={label} onClick={handleNav} className="hover:text-purple-500 transition-colors py-3">
                             <Link href={href}>
                                 <TextShimmer

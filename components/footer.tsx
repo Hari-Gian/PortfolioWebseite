@@ -1,22 +1,25 @@
 export default function Footer() {
     return (
-        <footer className="w-full bg-gray-100 text-gray-600 pt-16 pb-8 mt-16 border-t shadow-sm">
-            <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 md:gap-8">
+        <footer className="relative w-full bg-gradient-to-r text-gray-100 pt-20 pb-8 mt-8 shadow-lg ">
 
-                {/* Kontakt */}
-                <div className="flex flex-col items-center md:items-start space-y-2">
-                    <h3 className="text-black text-lg font-bold">Kontakt</h3>
+
+            <div
+                className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+
+
+                <div className="flex flex-col justify-center items-center space-y-4">
+                    <a className="text-white transition-colors duration text-lg">Contact:</a>
                     <a
                         href="https://github.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-black transition-colors duration-300"
+                        className="hover:text-pink-400 transition-colors duration-300"
                     >
                         GitHub ↗
                     </a>
                     <a
                         href="mailto:harigian545@gmail.com"
-                        className="hover:text-black transition-colors duration-300"
+                        className="hover:text-pink-400 transition-colors duration-300"
                     >
                         Email ↗
                     </a>
@@ -24,20 +27,19 @@ export default function Footer() {
                         href="https://linkedin.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-black transition-colors duration-300"
+                        className="hover:text-pink-400 transition-colors duration-300"
                     >
                         LinkedIn ↗
                     </a>
                 </div>
 
-                {/* Programmiersprachen */}
-                <div className="flex flex-col items-center md:items-start space-y-2">
-                    <h3 className="text-black text-lg font-bold">Technologien</h3>
+                <div className="flex flex-col justify-center items-center space-y-4">
+                    <a className="text-white transition-colors duration text-lg">Programmiersprachen:</a>
                     <a
                         href="https://tailwindcss.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-black transition-colors duration-300"
+                        className="hover:text-pink-400 transition-colors duration-300"
                     >
                         Tailwind CSS ↗
                     </a>
@@ -45,37 +47,33 @@ export default function Footer() {
                         href="https://www.typescriptlang.org"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-black transition-colors duration-300"
+                        className="hover:text-pink-400 transition-colors duration-300"
                     >
                         TypeScript ↗
                     </a>
                 </div>
 
-                {/* Portfolio Info */}
-                <div className="text-center md:text-left space-y-2">
-                    <h2 className="text-2xl font-extrabold text-black">Portfolio Webseite</h2>
-                    <p className="text-sm text-gray-700">
+                <div className="text-center md:text-left">
+                    <h2 className="text-2xl font-extrabold text-white">Portfolio Webseite</h2>
+                    <p className="text-sm text-gray-300">
                         &copy; {new Date().getFullYear()} Alle Rechte vorbehalten.
                     </p>
                 </div>
 
-                {/* Rechtliches */}
-                <div className="flex flex-col items-center md:items-start space-y-2">
-                    <h3 className="text-black text-lg font-bold">Rechtliches</h3>
+                <div className="flex flex-col space-y-4">
                     <a
                         href="#impressum"
-                        className="hover:text-black transition-colors duration-300"
+                        className="text-gray-300 text-lg hover:text-white transition-colors duration-300"
                     >
                         Impressum
                     </a>
                     <a
                         href="#datenschutz"
-                        className="hover:text-black transition-colors duration-300"
+                        className="text-gray-300 text-lg hover:text-white transition-colors duration-300"
                     >
                         Datenschutz
                     </a>
                 </div>
-
             </div>
         </footer>
     );
