@@ -61,7 +61,7 @@ function TextShimmer({
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
-    const [textColor, setTextColor] = useState('black');
+    const [textColor, setTextColor] = useState('#000000');
     const [isScrolled, setIsScrolled] = useState(false);
     const [position, setPosition] = useState({
         left: 0,
@@ -150,22 +150,29 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-gray-200 border-b shadow-sm"}`}>
+        <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-gray-100 border-b shadow-sm "}`}>
             <div
                 className={`max-w-6xl mx-auto flex items-center ${isScrolled ? "justify-center" : "justify-between"} p-6`}>
                 {/* Logo */}
                 {!isScrolled && (
-                    <Link href="/">
+                    <a
+                        href="/"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = "/";
+                        }}
+                    >
                         <TextShimmer duration={3} spread={1.5}>
                             Hari Gian
                         </TextShimmer>
-                    </Link>
+                    </a>
+
                 )}
 
                 {/* Mobile toggle */}
                 {!isScrolled && (
                     <button onClick={handleNav} className="sm:hidden p-2 z-20">
-                        <div
+                    <div
                             className={`w-6 h-0.5 mb-1 bg-current transition-all ${nav ? "rotate-45 translate-y-1.5" : ""}`}/>
                         <div className={`w-6 h-0.5 mb-1 bg-current transition-all ${nav ? "opacity-0" : ""}`}/>
                         <div
@@ -190,13 +197,15 @@ const Navbar = () => {
                             {navItems.map(({label, href, duration, spread}) => (
                                 <li key={label} className="px-2">
                                     <Link href={href}>
-                                        <TextShimmer
-                                            duration={duration}
-                                            spread={spread}
-                                            className="text-xl px-4 py-2 rounded-md hover:text-black-800 hover:bg-black-300 transition-all duration-300 ease-in-out"
-                                        >
-                                            {label}
-                                        </TextShimmer>
+                                        <span className="inline-block px-6 py-2 rounded-full hover:bg-gray-300 hover:text-white transition-all duration-300 ease-in-out">
+                                            <TextShimmer
+                                                duration={duration}
+                                                spread={spread}
+                                                className="text-[1.5rem] font-bold"
+                                            >
+                                                {label}
+                                            </TextShimmer>
+                                        </span>
                                     </Link>
                                 </li>
                             ))}

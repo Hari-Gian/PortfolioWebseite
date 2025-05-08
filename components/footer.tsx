@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="bg-gray-300 relative w-full bg-gradient-to-r text-gray-100 pt-20 pb-8 mt-8 shadow-lg">
+        <footer className="bg-gray-100 relative w-full bg-gradient-to-r text-gray-100 pt-20 pb-8 mt-8 shadow-lg">
 
 
             <div
