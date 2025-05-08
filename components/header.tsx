@@ -3,8 +3,6 @@
 import Link from 'next/link';
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion } from "framer-motion";
-import {Moon, Sun, Send } from"lucide-react"
-const [isDarkMode, setDarkMode] = React.useState(true);
 
 // Utility function for class names
 const cn = (...classes: string[]) => {
@@ -31,13 +29,6 @@ function TextShimmer({
         return typeof children === 'string' ? children.length * spread : 10 * spread;
     }, [children, spread]);
 
-    React.useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }, [isDarkMode])
 
     return (
         <motion.h1
@@ -159,7 +150,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-gray-100 border-b shadow-sm"}`}>
+        <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-gray-200 border-b shadow-sm"}`}>
             <div
                 className={`max-w-6xl mx-auto flex items-center ${isScrolled ? "justify-center" : "justify-between"} p-6`}>
                 {/* Logo */}
