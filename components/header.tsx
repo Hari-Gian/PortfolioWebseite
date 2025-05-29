@@ -150,7 +150,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-gray-300 border-b shadow-sm "}`}>
+        <nav className={`fixed top-0 left-0 w-full z-10 ${!isScrolled && "bg-white border-b shadow-sm "}`}>
             <div
                 className={`max-w-6xl mx-auto flex items-center ${isScrolled ? "justify-center" : "justify-between"} p-6`}>
                 {/* Logo */}

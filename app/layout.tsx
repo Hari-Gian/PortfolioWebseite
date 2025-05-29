@@ -7,6 +7,7 @@ import CutoutTextLoader from "../others/loadingscreen";
 import React from "react";
 import Home from "../WebseiteKomponenten/home";
 import Aboutme from "../WebseiteKomponenten/aboutme";
+import Contact from "../WebseiteKomponenten/contact";
 import { cn } from "@/lib/utils";
 import { Glow } from "@/others/glow";
 
@@ -50,7 +51,10 @@ export default function RootLayout() {
                 <Aboutme />
               </main>
             </div>
+
+            <Contact />
           </div>
+
           <Footer />
         </div>
       </body>
