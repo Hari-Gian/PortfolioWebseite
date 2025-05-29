@@ -125,14 +125,15 @@
   }
 
   :root {
-    --brand: 27 96% 61%;
-    --brand-foreground: 31 97% 72%;
-  }
+  --brand: 220 100% 60%;
+  --brand-foreground: 220 100% 80%;
+}
 
-  .dark {
-    --brand: 31 97% 72%;
-    --brand-foreground: 27 96% 61%
-  }
+.dark {
+  --brand: 220 100% 60%;
+  --brand-foreground: 220 100% 80%;
+}
+
 }
 
 @layer utilities {
