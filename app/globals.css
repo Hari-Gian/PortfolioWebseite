@@ -125,14 +125,16 @@
   }
 
   :root {
-  --brand: 220 100% 60%;
-  --brand-foreground: 220 100% 80%;
+  --brand: 0 0% 85%;            /* light gray */
+  --brand-foreground: 0 0% 95%; /* lighter gray */
 }
 
 .dark {
-  --brand: 220 100% 60%;
-  --brand-foreground: 220 100% 80%;
+  --brand: 0 0% 85%;            /* same light gray */
+  --brand-foreground: 0 0% 95%; /* lighter gray */
 }
+
+
 
 }
 

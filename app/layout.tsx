@@ -32,7 +32,7 @@ export default function RootLayout() {
         className={cn(
           geistSans.variable,
           geistMono.variable,
-          "antialiased relative min-h-screen"
+          "antialiased relative min-h-screen bg-black"
         )}
       >
         {/* Glow Background */}
