@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
     name: string;
@@ -14,12 +15,33 @@ export default function Contact() {
         message: ''
     });
 
+    const [sending, setSending] = useState(false);
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Here you would typically handle the form submission
-        // For now, we'll just log the data
-        console.log('Form submitted:', formData);
-        // You can add your email service integration here
+        setSending(true);
+
+        try {
+            const result = await emailjs.send(
+                'service_3vvhsmr',
+                'template_4b5rhfq',
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                },
+                '4lTmxMxaRvyLafH2n'
+            );
+
+            console.log('Email successfully sent!', result.text);
+            alert('Message sent!');
+            setFormData({ name: '', email: '', message: '' });
+        } catch (error) {
+            console.error('Failed to send email:', error);
+            alert('Failed to send message. Please try again later.');
+        } finally {
+            setSending(false);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -79,9 +101,12 @@ export default function Contact() {
                     </div>
                     <button
                         type="submit"
-                        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        disabled={sending}
+                        className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                            sending ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+                        }`}
                     >
-                        Send Message
+                        {sending ? 'Sending...' : 'Send Message'}
                     </button>
                 </form>
             </div>
