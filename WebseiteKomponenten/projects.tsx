@@ -59,7 +59,7 @@ export default function Projects() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/20 transition-colors"
+                                className="bg-gray-500 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/20 transition-colors"
                             >
                                 <div className="grid md:grid-cols-2 gap-6">
                                     {/* Project Image */}

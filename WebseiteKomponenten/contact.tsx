@@ -66,7 +66,7 @@ export default function Contact() {
                     </h2>
 
                     {/* Contact Form */}
-                    <div className=" bg-gray-300 rounded-xl p-8 shadow-lg border border-gray-400 hover:border-gray-300 transition-colors mb-12">
+                    <div className=" bg-gray-400 rounded-xl p-8 shadow-lg border border-gray-400 hover:border-gray-300 transition-colors mb-12">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
