@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import React, { useState, useRef, useMemo } from 'react';
 import { motion } from "framer-motion";
+import { X } from 'lucide-react';
 
 // Utility function for class names
 const cn = (...classes: string[]) => {
@@ -73,55 +74,70 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-            <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
-                {/* Logo */}
-                <a
-                    href="#home"
-                    className="hover:opacity-80 transition-opacity"
-                >
-                    <TextShimmer duration={4} spread={2}>
-                        Hari Gian
-                    </TextShimmer>
-                </a>
+        <>
+            <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+                <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
+                    {/* Logo */}
+                    <a
+                        href="#home"
+                        className="hover:opacity-80 transition-opacity"
+                    >
+                        <TextShimmer duration={4} spread={2}>
+                            Hari Gian
+                        </TextShimmer>
+                    </a>
 
-                {/* Mobile toggle */}
+                    {/* Mobile toggle */}
+                    <button
+                        onClick={handleNav}
+                        className="sm:hidden relative z-[100] p-2 text-white hover:text-pink-400 transition-colors"
+                        aria-label="Toggle menu"
+                    >
+                        <div className="relative w-6 h-6">
+                            <div className={`absolute w-6 h-0.5 bg-current transition-all duration-300 ${nav ? "rotate-45 top-3" : "top-1"}`} />
+                            <div className={`absolute w-6 h-0.5 bg-current transition-all duration-300 ${nav ? "opacity-0" : "top-3"}`} />
+                            <div className={`absolute w-6 h-0.5 bg-current transition-all duration-300 ${nav ? "-rotate-45 top-3" : "top-5"}`} />
+                        </div>
+                    </button>
+
+                    {/* Desktop Navigation */}
+                    <ul className="hidden sm:flex space-x-8">
+                        {navItems.map(({ label, href }) => (
+                            <li key={label}>
+                                <a
+                                    href={href}
+                                    className="text-gray-300 hover:text-pink-400 transition-colors px-4 py-2 rounded-full hover:bg-gray-800/50"
+                                >
+                                    {label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </nav>
+
+            {/* Mobile Menu - Moved outside nav element */}
+            <div
+                className={`sm:hidden fixed top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-sm flex flex-col items-center justify-center transition-all duration-300 ${
+                    nav ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+                style={{ zIndex: 90 }}
+            >
+                {/* Exit Button */}
                 <button
                     onClick={handleNav}
-                    className="sm:hidden p-2 z-20 text-white hover:text-pink-400 transition-colors"
+                    className="absolute top-6 right-6 p-2 text-white hover:text-pink-400 transition-colors"
+                    aria-label="Close menu"
                 >
-                    <div className={`w-6 h-0.5 mb-1 bg-current transition-all ${nav ? "rotate-45 translate-y-1.5" : ""}`} />
-                    <div className={`w-6 h-0.5 mb-1 bg-current transition-all ${nav ? "opacity-0" : ""}`} />
-                    <div className={`w-6 h-0.5 bg-current transition-all ${nav ? "-rotate-45 -translate-y-1.5" : ""}`} />
+                    <X className="w-8 h-8" />
                 </button>
 
-                {/* Desktop Navigation */}
-                <ul className="hidden sm:flex space-x-8">
-                    {navItems.map(({ label, href }) => (
-                        <li key={label}>
-                            <a
-                                href={href}
-                                className="text-gray-300 hover:text-pink-400 transition-colors px-4 py-2 rounded-full hover:bg-gray-800/50"
-                            >
-                                {label}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            {/* Mobile Menu */}
-            <div
-                className={`sm:hidden fixed inset-0 bg-black/95 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ${
-                    nav ? "opacity-100 z-40" : "opacity-0 -z-10"
-                }`}
-            >
                 <ul className="text-center space-y-12">
                     {navItems.map(({ label, href }) => (
                         <li key={label} onClick={handleNav}>
                             <a
                                 href={href}
-                                className="text-4xl text-gray-300 hover:text-pink-400 transition-colors"
+                                className="text-4xl text-gray-300 hover:text-pink-400 transition-colors block py-2"
                             >
                                 {label}
                             </a>
@@ -129,7 +145,7 @@ const Navbar = () => {
                     ))}
                 </ul>
             </div>
-        </nav>
+        </>
     );
 };
 
