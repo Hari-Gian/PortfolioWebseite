@@ -54,7 +54,7 @@ export default function RootLayout() {
             </section>
 
             <section id="projects" className="min-h-screen">
-
+              <Projects />
             </section>
 
             <section id="contact" className="min-h-screen">
