@@ -106,7 +106,7 @@ const Navbar = () => {
                             <li key={label}>
                                 <a
                                     href={href}
-                                    className="text-gray-300 hover:text-pink-400 transition-colors px-4 py-2 rounded-full hover:bg-gray-800/50"
+                                    className="text-gray-300 hover:text-white transition-colors px-4 py-2"
                                 >
                                     {label}
                                 </a>

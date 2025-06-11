@@ -66,10 +66,10 @@ export default function Contact() {
                     </h2>
 
                     {/* Contact Form */}
-                    <div className=" bg-gray-400 rounded-xl p-8 shadow-lg border border-gray-400 hover:border-gray-300 transition-colors mb-12">
+                    <div className=" bg-black rounded-xl p-8 shadow-lg border border-white hover:border-gray-300 transition-colors mb-12">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
+                                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                                     Name
                                 </label>
                                 <input
@@ -79,13 +79,13 @@ export default function Contact() {
                                     required
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
                                     placeholder="Your name"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                                     Email
                                 </label>
                                 <input
@@ -95,13 +95,13 @@ export default function Contact() {
                                     required
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
                                     placeholder="your.email@example.com"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                                     Message
                                 </label>
                                 <textarea
@@ -111,19 +111,19 @@ export default function Contact() {
                                     required
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
                                     placeholder="Your message..."
                                 />
                             </div>
 
                             {error && (
-                                <div className="text-red-600 text-sm">
+                                <div className="text-red-500 text-sm">
                                     {error}
                                 </div>
                             )}
 
                             {success && (
-                                <div className="text-green-600 text-sm">
+                                <div className="text-green-500 text-sm">
                                     Message sent successfully!
                                 </div>
                             )}
@@ -134,7 +134,7 @@ export default function Contact() {
                                 className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-medium transition-all duration-300 ${
                                     sending 
                                         ? 'bg-gray-400 cursor-not-allowed' 
-                                        : 'bg-gray-700 hover:bg-gray-800'
+                                        : 'bg-black border-white border hover:bg-white/20'
                                 }`}
                             >
                                 {sending ? (
