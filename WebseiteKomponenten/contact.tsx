@@ -69,7 +69,7 @@ export default function Contact() {
                     <div className=" bg-black rounded-xl p-8 shadow-lg border border-white hover:border-gray-300 transition-colors mb-12">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+                                <label htmlFor="name" className="block text-sm font-medium text-white mb-4">
                                     Name
                                 </label>
                                 <input
@@ -85,7 +85,7 @@ export default function Contact() {
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                                <label htmlFor="email" className="block text-sm font-medium text-white mb-4">
                                     Email
                                 </label>
                                 <input
@@ -101,7 +101,7 @@ export default function Contact() {
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                                <label htmlFor="message" className="block text-sm font-medium text-white mb-4">
                                     Message
                                 </label>
                                 <textarea
@@ -131,24 +131,25 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 disabled={sending}
-                                className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-medium transition-all duration-300 ${
-                                    sending 
-                                        ? 'bg-gray-400 cursor-not-allowed' 
-                                        : 'bg-black border-white border hover:bg-white/20'
+                                className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-medium transition-all duration-300 
+                                ${sending
+                                    ? 'bg-gray-400 cursor-not-allowed'
+                                    : 'bg-black border border-white hover:bg-indigo-500 cursor-pointer'
                                 }`}
                             >
                                 {sending ? (
                                     <>
-                                        <Loader2 className="w-5 h-5 animate-spin" />
+                                        <Loader2 className="w-5 h-5 animate-spin"/>
                                         Sending...
                                     </>
                                 ) : (
                                     <>
-                                        <Send className="w-5 h-5" />
+                                        <Send className="w-5 h-5"/>
                                         Send Message
                                     </>
                                 )}
                             </button>
+
                         </form>
                     </div>
 
@@ -160,7 +161,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="text-white hover:text-gray-900 transition-colors"
                         >
-                            <Github className="w-8 h-8" />
+                        <Github className="w-10 h-10" />
                         </a>
                         <a
                             href="https://instagram.com/yourusername"
@@ -168,7 +169,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="text-white hover:text-gray-900 transition-colors"
                         >
-                            <Instagram className="w-8 h-8" />
+                            <Instagram className="w-10 h-10" />
                         </a>
                         <a
                             href="https://linkedin.com/in/yourusername"
@@ -176,7 +177,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="text-white hover:text-gray-900 transition-colors"
                         >
-                            <Linkedin className="w-8 h-8" />
+                            <Linkedin className="w-10 h-10" />
                         </a>
                     </div>
                 </div>

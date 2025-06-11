@@ -49,8 +49,8 @@ export default function Projects() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h2 className="text-3xl font-bold mb-3 text-white">Projects</h2>
-                        <p className="text-white text-sm">
+                        <h2 className="text-5xl font-bold mb-3 text-white">Projects</h2>
+                        <p className="text-white text-xl ">
                             A showcase of my professional work and technical expertise.
                         </p>
                     </motion.div>
@@ -68,7 +68,7 @@ export default function Projects() {
                             >
                                 <div className="flex flex-col md:flex-row gap-8 p-8 bg-gradient-to-b from-black to-black/60 border border-white/75 transition-all duration-300">
                                     {/* Project Image */}
-                                    <div className="relative w-full md:w-56 h-40 flex-shrink-0">
+                                    <div className="relative w-full md:w-60 h-40 flex-shrink-0">
                                         <Image
                                             src={project.image}
                                             alt={project.title}
