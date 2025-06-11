@@ -88,7 +88,7 @@ export default function AboutMe() {
             <div className="container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
@@ -152,7 +152,7 @@ export default function AboutMe() {
                                     viewport={{ once: true }}
                                     className="group"
                                 >
-                                    <div className="relative bg-zinc-900 rounded-lg p-4 text-center border border-zinc-800 hover:border-zinc-700 transition-all duration-300">
+                                    <div className="relative bg-black rounded-lg p-4 text-center border border-white/50 hover:border-zinc-700 transition-all duration-300">
                                         <div className="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">{lang.icon}</div>
                                         <div className="font-medium text-zinc-300 border-t border-zinc-800 pt-2 mt-2">{lang.name}</div>
                                     </div>
