@@ -1,47 +1,64 @@
 "use client";
-
-import { MapPin } from "lucide-react";
-import { useState } from "react";
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { ArrowDown } from 'lucide-react';
 
 export default function Home() {
-
-    const [hovered, setHovered] = useState<boolean>(false);
-
     return (
-        <div className="flex justify-center h-screen absolute top-0 left-0 right-0 bottom-0">
-            <div className="flex items-center gap-6">
-
-                <div className="flex-shrink-0 w-1/3">
-                <img
-                        src="https://placehold.co/150x150"
-                        alt="Bild von mir"
-                        className="w-40 h-40 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 object-cover rounded-2xl shadow-2xl"
-                    />
-                </div>
-
-                <div className="w-2/5 flex flex-col justify-start">
-
-                    <h1
-                        className={`text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold text-white drop-shadow-xl text-left whitespace-nowrap 
-                            transform transition-all duration-300 ease-in-out ${hovered ? 'scale-110' : ''}`}
-                        onMouseEnter={() => setHovered(true)} // Hover ein
-                        onMouseLeave={() => setHovered(false)} // Hover aus
+        <div className="min-h-screen flex items-center justify-center text-white relative">
+            <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto text-center">
+                    {/* Profile Picture */}
+                    <motion.div
+                        className="mb-8"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        Hari Gian
-                    </h1>
+                        <div className="relative w-60 h-60 mx-auto rounded-full overflow-hidden border-4 border-black/50">
+                            <div className="absolute inset-0 bg-black/10"></div>
+                            <div className="relative w-full h-full flex items-center justify-center text-white">
+                                <span className="text-4xl "></span>
+                            </div>
+                        </div>
+                    </motion.div>
 
-                    <div className="flex items-center mt-2 space-x-2 text-gray-300 text-sm">
-                        <MapPin className="w-5 h-5 text-pink-400"/> {/* Location-Icon */}
-                        <a
-                            href="https://www.google.com/maps?q=47.269786,8.644454"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                        >
-                            Meilen, Schweiz
+                    {/* Introduction Text */}
+                    <motion.div
+                        className="space-y-6"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                        <h1 className="text-5xl md:text-6xl font-bold text-white/75">
+                            Hari Gian
+                        </h1>
+                        <h2 className="text-2xl text-white/50">
+                            Full Stack Developer
+                        </h2>
+                        <p className="text-white/75 text-lg max-w-2xl mx-auto">
+                            Passionate about creating innovative web solutions and turning ideas into reality through clean code and modern technologies.
+                        </p>
+                    </motion.div>
+
+                    {/* Down Arrow */}
+                    <motion.div
+                        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.8,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                            repeatDelay: 0.5
+                        }}
+                    >
+                        <a href="#about" className="text-white hover:text-white/50 transition-colors">
+                            <ArrowDown className="w-10 h-10" />
                         </a>
-                    </div>
-
+                    </motion.div>
                 </div>
             </div>
         </div>

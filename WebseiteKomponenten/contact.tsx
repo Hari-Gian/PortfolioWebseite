@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Send, Loader2, Github, Instagram, Linkedin } from 'lucide-react';
+import { Send, Loader2, Github, Mail, Linkedin } from 'lucide-react';
 
 interface FormData {
     name: string;
@@ -164,12 +164,12 @@ export default function Contact() {
                         <Github className="w-10 h-10" />
                         </a>
                         <a
-                            href="https://instagram.com/yourusername"
+                            href="mailto:harigian545@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white hover:text-gray-900 transition-colors"
                         >
-                            <Instagram className="w-10 h-10" />
+                            <Mail className="w-10 h-10" />
                         </a>
                         <a
                             href="https://linkedin.com/in/yourusername"

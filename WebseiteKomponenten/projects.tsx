@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Github, ExternalLink} from 'lucide-react';
 
 export default function Projects() {
     const projects = [
@@ -12,9 +12,7 @@ export default function Projects() {
             image: "/project1.jpg",
             technologies: ["Next.js", "Node.js", "MongoDB", "Stripe"],
             github: "https://github.com/yourusername/project1",
-            live: "https://project1.com",
-            role: "Full Stack Developer",
-            duration: "3 months"
+            live: "https://project1.com"
         },
         {
             title: "bla bla",
@@ -22,9 +20,7 @@ export default function Projects() {
             image: "/project2.jpg",
             technologies: ["React", "Firebase", "Tailwind CSS"],
             github: "https://github.com/yourusername/project2",
-            live: "https://project2.com",
-            role: "Frontend Developer",
-            duration: "2 months"
+            live: "https://project2.com"
         },
         {
             title: "bla bla",
@@ -32,9 +28,7 @@ export default function Projects() {
             image: "/project3.jpg",
             technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
             github: "https://github.com/yourusername/project3",
-            live: "https://project3.com",
-            role: "Full Stack Developer",
-            duration: "4 months"
+            live: "https://project3.com"
         }
     ];
 
@@ -45,9 +39,9 @@ export default function Projects() {
                     {/* Header */}
                     <motion.div
                         className="text-center mb-20"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                        initial={{opacity: 0, y: -20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5}}
                     >
                         <h2 className="text-5xl font-bold mb-3 text-white">Projects</h2>
                         <p className="text-white text-xl ">
@@ -60,13 +54,14 @@ export default function Projects() {
                         {projects.map((project, index) => (
                             <motion.div
                                 key={project.title}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
+                                initial={{opacity: 0, x: -20}}
+                                whileInView={{opacity: 1, x: 0}}
+                                transition={{duration: 0.5, delay: index * 0.1}}
+                                viewport={{once: true}}
                                 className="group"
                             >
-                                <div className="flex flex-col md:flex-row gap-8 p-8 bg-gradient-to-b from-black to-black/60 border border-white/75 transition-all duration-300">
+                                <div
+                                    className="flex flex-col md:flex-row gap-8 p-8 bg-gradient-to-b from-black to-black/60 border border-white/75 transition-all duration-300">
                                     {/* Project Image */}
                                     <div className="relative w-full md:w-60 h-40 flex-shrink-0">
                                         <Image
@@ -75,18 +70,18 @@ export default function Projects() {
                                             fill
                                             className="object-cover"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-white/30 to-transparent"></div>
+                                        <div
+                                            className="absolute inset-0 bg-gradient-to-t from-white/10 via-white/30 to-transparent"></div>
                                     </div>
 
                                     {/* Project Info */}
                                     <div className="flex-grow">
-                                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                            <div>
+                                        <div
+                                            className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                            <div className="w-full">
                                                 <h3 className="text-xl font-medium text-white mb-2">{project.title}</h3>
+                                                <div className="h-[0.25] w-full bg-zinc-600 mb-2"/>
                                                 <div className="flex items-center gap-2 text-sm text-white">
-                                                    <span>{project.role}</span>
-                                                    <span>•</span>
-                                                    <span>{project.duration}</span>
                                                 </div>
                                             </div>
                                             <div className="flex gap-5">
@@ -96,7 +91,7 @@ export default function Projects() {
                                                     rel="noopener noreferrer"
                                                     className="text-white/75 hover:text-white transition-colors duration-300"
                                                 >
-                                                    <Github className="w-6 h-6" />
+                                                    <Github className="w-6 h-6"/>
                                                 </a>
                                                 <a
                                                     href={project.live}
@@ -104,7 +99,7 @@ export default function Projects() {
                                                     rel="noopener noreferrer"
                                                     className="text-white/75 hover:text-white transition-colors duration-300"
                                                 >
-                                                    <ExternalLink className="w-6 h-6" />
+                                                    <ExternalLink className="w-6 h-6"/>
                                                 </a>
                                             </div>
                                         </div>
@@ -125,7 +120,7 @@ export default function Projects() {
                                     </div>
                                 </div>
                             </motion.div>
-                        ))}
+                            ))}
                     </div>
                 </div>
             </div>
