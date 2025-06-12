@@ -8,39 +8,39 @@ export default function AboutMe() {
     const programmingLanguages = [
         {
             name: "JavaScript",
-            icon: "",
+            image: "/Pictures/javascript.png",
         },
         {
             name: "TypeScript",
-            icon: "",
+            image: "/tech/typescript.png",
         },
         {
             name: "Python",
-            icon: "",
+            image: "/tech/python.png",
         },
         {
             name: "Java",
-            icon: "",
+            image: "/tech/java.png",
         },
         {
             name: "HTML/CSS",
-            icon: "",
+            image: "/tech/html-css.png",
         },
         {
             name: "SQL",
-            icon: "",
+            image: "/tech/sql.png",
         },
         {
             name: "React",
-            icon: "",
+            image: "/tech/react.png",
         },
         {
             name: "Node.js",
-            icon: "",
+            image: "/tech/nodejs.png",
         },
         {
             name: "Docker",
-            icon: "",
+            image: "/tech/docker.png",
         }
     ];
 
@@ -48,19 +48,19 @@ export default function AboutMe() {
         {
             title: "My Journey",
             text: "Started coding at a young age, fascinated by how technology shapes our world. Every project is a new adventure in problem-solving.",
-            image: "/coding-journey.jpg",
+            image: "/about/journey.jpg",
             imagePosition: "left"
         },
         {
             title: "What I Do",
             text: "I create web applications that are both beautiful and functional. My focus is on building responsive, user-friendly interfaces with clean code.",
-            image: "/coding-work.jpg",
+            image: "/about/work.jpg",
             imagePosition: "right"
         },
         {
             title: "My Approach",
             text: "I believe in continuous learning and staying up-to-date with the latest technologies. Every challenge is an opportunity to grow and improve.",
-            image: "/coding-approach.jpg",
+            image: "/about/approach.jpg",
             imagePosition: "left"
         }
     ];
@@ -84,7 +84,7 @@ export default function AboutMe() {
     ];
 
     return (
-        <div id="about" className="min-h-screen text-white py-20">
+        <div id="about" className="min-h-screen text-black py-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
@@ -94,7 +94,7 @@ export default function AboutMe() {
                         transition={{ duration: 0.8 }}
                         className="text-center mb-20"
                     >
-                        <h2 className="text-5xl font-bold mb-6 text-white">
+                        <h2 className="text-5xl font-bold mb-6 text-black">
                             About Me
                         </h2>
                     </motion.div>
@@ -104,30 +104,29 @@ export default function AboutMe() {
                         {aboutSections.map((section, index) => (
                             <motion.div
                                 key={section.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.2 }}
-                                viewport={{ once: true }}
+                                initial={{opacity: 0, y: 20}}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{duration: 0.5, delay: index * 0.2}}
+                                viewport={{once: true}}
                                 className="group"
                             >
-                                <div className="relative rounded-lg p-6 bg-gradient-to-b from-black to-black/60 border border-white/75 transition-all duration-300">
-                                    <div className={`flex flex-col md:flex-row items-center gap-8 ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : ''}`}>
+                                <div className="relative rounded-lg p-5 max-w-5xl mx-auto bg-white shadow-lg border border-black/10 hover:border-black/20 transition-all duration-300">
+                                    <div className={`flex flex-col md:flex-row items-center gap-7 ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : ''}`}>
                                         <div className="w-full md:w-1/3">
-                                            <div className="relative h-50 md:h-50 rounded-lg overflow-hidden border-2 border-white/50">
+                                            <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden border-2 border-black/10">
                                                 <Image
                                                     src={section.image}
                                                     alt={section.title}
                                                     fill
                                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                                                 />
-                                                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                             </div>
                                         </div>
                                         <div className="w-full md:w-2/3">
-                                            <h3 className="text-3xl font-bold mb-4 text-white border-b border-zinc-800 pb-2">
+                                            <h3 className="text-3xl font-bold mb-4 text-black border-b border-black/10 pb-2">
                                                 {section.title}
                                             </h3>
-                                            <p className="text-zinc-400 text-lg leading-relaxed">
+                                            <p className="text-black/70 text-lg leading-relaxed">
                                                 {section.text}
                                             </p>
                                         </div>
@@ -138,23 +137,48 @@ export default function AboutMe() {
                     </div>
 
                     {/* Programming Languages Grid */}
-                    <div className="mb-20">
-                        <h3 className="text-3xl font-bold mb-8 text-center text-white border-b border-white/75 pb-2 inline-block">
+                    <div className="mb-12">
+                        <h3 className="text-lg font-bold mb-4 text-center text-black border-b border-black/10 pb-2 inline-block">
                             Programming Languages & Tools
                         </h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-8">
+                        <div className="grid grid-cols-5 gap-3 mt-4 max-w-3xl mx-auto">
                             {programmingLanguages.map((lang, index) => (
                                 <motion.div
                                     key={lang.name}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                                    initial={{opacity: 0, y: 20}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    transition={{duration: 0.3, delay: index * 0.1}}
                                     viewport={{ once: true }}
                                     className="group"
                                 >
-                                    <div className="relative bg-black rounded-lg p-4 text-center border border-white/50 hover:border-zinc-700 transition-all duration-300">
-                                        <div className="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">{lang.icon}</div>
-                                        <div className="font-medium text-zinc-300 border-t border-zinc-800 pt-2 mt-2">{lang.name}</div>
+                                    <div className="relative bg-black rounded-sm aspect-square p-2 text-center shadow-sm hover:shadow-lg border border-black/10 hover:border-black/20 transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center overflow-hidden">
+                                        <motion.div
+                                            className="relative w-7 h-7"
+                                            whileHover={{ scale: 1.2 }}
+                                            transition={{ duration: 0.3 }}
+                                        >
+                                            <Image
+                                                src={lang.image}
+                                                alt={lang.name}
+                                                fill
+                                                className="object-contain invert"
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            className="absolute inset-0 bg-black/95 flex items-center justify-center"
+                                            initial={{ opacity: 0 }}
+                                            whileHover={{ opacity: 1 }}
+                                            transition={{ duration: 0.15, ease: "easeOut" }}
+                                        >
+                                            <motion.span
+                                                className="font-medium text-white text-[11px] leading-tight"
+                                                initial={{ scale: 0.8, opacity: 0 }}
+                                                whileHover={{ scale: 1, opacity: 1 }}
+                                                transition={{ duration: 0.2, delay: 0.05 }}
+                                            >
+                                                {lang.name}
+                                            </motion.span>
+                                        </motion.div>
                                     </div>
                                 </motion.div>
                             ))}
