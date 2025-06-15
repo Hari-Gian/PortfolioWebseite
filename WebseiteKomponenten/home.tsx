@@ -31,13 +31,13 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <h1 className="text-5xl md:text-6xl font-bold text-white/75">
+                        <h1 className="text-5xl md:text-6xl font-bold text-zinc-950">
                             Hari Gian
                         </h1>
-                        <h2 className="text-2xl text-white/50">
+                        <h2 className="text-2xl text-zinc-950">
                             Full Stack Developer
                         </h2>
-                        <p className="text-white/75 text-lg max-w-2xl mx-auto">
+                        <p className="text-zinc-950 max-w-2xl text-xl mx-auto">
                             Passionate about creating innovative web solutions and turning ideas into reality through clean code and modern technologies.
                         </p>
                     </motion.div>
@@ -48,14 +48,14 @@ export default function Home() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{
-                            duration: 0.5,
-                            delay: 0.8,
+                            duration: 1,
+                            delay: 0.5,
                             repeat: Infinity,
                             repeatType: "reverse",
-                            repeatDelay: 0.5
+                            repeatDelay: 0.1
                         }}
                     >
-                        <a href="#about" className="text-white hover:text-white/50 transition-colors">
+                        <a href="#about" className="text-black/75 hover:text-white/50 transition-colors">
                             <ArrowDown className="w-10 h-10" />
                         </a>
                     </motion.div>

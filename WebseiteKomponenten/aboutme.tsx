@@ -84,7 +84,7 @@ export default function AboutMe() {
     ];
 
     return (
-        <div id="about" className="min-h-screen text-black py-20">
+        <div id="about" className="min-h-screen text-white py-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
@@ -110,10 +110,10 @@ export default function AboutMe() {
                                 viewport={{once: true}}
                                 className="group"
                             >
-                                <div className="relative rounded-lg p-5 max-w-5xl mx-auto bg-white shadow-lg border border-black/10 hover:border-black/20 transition-all duration-300">
+                                <div className="relative rounded-lg p-5 max-w-5xl mx-auto bg-gradient-to-b from-black to-black/60 border border-white/75 transition-all duration-300">
                                     <div className={`flex flex-col md:flex-row items-center gap-7 ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : ''}`}>
                                         <div className="w-full md:w-1/3">
-                                            <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden border-2 border-black/10">
+                                            <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden border-2 border-white/10">
                                                 <Image
                                                     src={section.image}
                                                     alt={section.title}
@@ -123,10 +123,10 @@ export default function AboutMe() {
                                             </div>
                                         </div>
                                         <div className="w-full md:w-2/3">
-                                            <h3 className="text-3xl font-bold mb-4 text-black border-b border-black/10 pb-2">
+                                            <h3 className="text-3xl font-bold mb-4 text-white/75 border-b border-white/10 pb-2">
                                                 {section.title}
                                             </h3>
-                                            <p className="text-black/70 text-lg leading-relaxed">
+                                            <p className="text-white/50 text-lg leading-relaxed">
                                                 {section.text}
                                             </p>
                                         </div>
