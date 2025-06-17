@@ -19,21 +19,21 @@ interface Categories {
 export default function AboutMe() {
     const aboutSections = [
         {
-            title: "My Journey",
+            title: "Unihockey",
             text: "Started coding at a young age, fascinated by how technology shapes our world. Every project is a new adventure in problem-solving.",
             image: "/about/journey.jpg",
-            imagePosition: "left"
-        },
-        {
-            title: "What I Do",
-            text: "I create web applications that are both beautiful and functional. My focus is on building responsive, user-friendly interfaces with clean code. ",
-            image: "/about/work.jpg",
             imagePosition: "left"
         },
         {
             title: "My Approach",
             text: "I believe in continuous learning and staying up-to-date with the latest technologies. Every challenge is an opportunity to grow and improve.",
             image: "/about/approach.jpg",
+            imagePosition: "left"
+        },
+        {
+            title: "What I Do",
+            text: "I create web applications that are both beautiful and functional. My focus is on building responsive, user-friendly interfaces with clean code. ",
+            image: "/about/work.jpg",
             imagePosition: "left"
         }
     ];
@@ -82,7 +82,7 @@ export default function AboutMe() {
                             >
                                 <div className="relative">
                                     {/* Main Content */}
-                                    <div className="relative bg-black/70 backdrop-blur-sm rounded-xl overflow-hidden">
+                                    <div className="relative bg-gradient-to-b from-black/75 to-black backdrop-blur-sm rounded-xl overflow-hidden">
                                         <div
                                             className={`flex flex-col ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                                             {/* Section Image */}
@@ -98,7 +98,6 @@ export default function AboutMe() {
                                                         className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
                                                 </div>
                                             </div>
-
                                             {/* Section Info */}
                                             <div className="w-full md:w-2/3 p-9 flex flex-col justify-center relative">
                                                 <div
@@ -107,7 +106,7 @@ export default function AboutMe() {
                                                     <h3 className="text-2xl font-bold text-white mb-3">
                                                         {section.title}
                                                     </h3>
-                                                    <div className="w-24 h-0.5 bg-white/30"></div>
+                                                    <div className="w-50 h-0.25 bg-white/30"></div>
                                                 </div>
                                                 <p className="text-white/90 text-base leading-relaxed tracking-wide">
                                                     {section.text}
@@ -115,18 +114,15 @@ export default function AboutMe() {
                                             </div>
                                         </div>
                                     </div>
-
                                     {/* Decorative Elements */}
-                                    <div
-                                        className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-transparent rounded-xl -z-10"></div>
-                                    <div
-                                        className="absolute -inset-0.5 bg-gradient-to-l from-white/10 to-transparent rounded-xl -z-10"></div>
+                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-transparent rounded-xl -z-10"></div>
+                                    <div className="absolute -inset-0.5 bg-gradient-to-l from-white/10 to-transparent rounded-xl -z-10"></div>
                                 </div>
                             </motion.div>
                         ))}
                     </div>
 
-                    {/* Tech Stack Grid */}
+                    {/* programmiersprachen */}
                     <div className="mb-12">
                         <h3 className="text-xl font-bold mb-4 text-center text-white border-b border-white/25 pb-2 w-full">
                             Programming Languages & Tools
@@ -141,10 +137,10 @@ export default function AboutMe() {
                                         whileInView={{opacity: 1, y: 0}}
                                         transition={{duration: 0.3, delay: index * 0.1}}
                                         viewport={{once: true}}
-                                        className="bg-gradient-to-b from-black to-black rounded-lg p-4 flex flex-col items-center justify-center hover:border-white transition-all duration-300"
+                                        className="bg-black rounded-lg p-4 flex flex-col items-center justify-center hover:bg-gray-500 transition-all duration-300"
                                     >
                                         <Icon
-                                            className="w-8 h-8 mb-2 text-white"
+                                            className="w-8 h-8 mb-2 text-white "
                                         />
                                         <span className="text-white text-sm font-medium">
                                             {tech.name}
@@ -158,4 +154,4 @@ export default function AboutMe() {
             </div>
         </div>
     );
-} 
+}
