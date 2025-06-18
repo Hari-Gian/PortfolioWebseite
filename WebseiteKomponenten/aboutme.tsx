@@ -20,20 +20,21 @@ export default function AboutMe() {
     const aboutSections = [
         {
             title: "Unihockey",
-            text: "Started coding at a young age, fascinated by how technology shapes our world. Every project is a new adventure in problem-solving.",
-            image: "/about/journey.jpg",
+            text: "Ich spiele Unihockey seit fast 10 Jahren und gehe seitdem regelmässig zwei- bis drei mal pro Woche ins Training. " +
+                "Ich liebe diesen Sport, da ich es mir spass macht und auch anstrengend  und herausfordernd ist. " ,
+            image: "/UnihockeyBild.png",
             imagePosition: "left"
         },
         {
-            title: "My Approach",
-            text: "I believe in continuous learning and staying up-to-date with the latest technologies. Every challenge is an opportunity to grow and improve.",
-            image: "/about/approach.jpg",
+            title: "Gym",
+            text: "Ich gehe ein- bis zweimal pro Woche neben dem Unihockey ins Fitnessstudio. Dabei trainiere ich meistens mit Freunden, sodass wir uns gegenseitig unterstützen und motivieren können.",
+            image: "/GymBild.jpg",
             imagePosition: "left"
         },
         {
-            title: "What I Do",
-            text: "I create web applications that are both beautiful and functional. My focus is on building responsive, user-friendly interfaces with clean code. ",
-            image: "/about/work.jpg",
+            title: "Mit Freunden etwas unternehmen",
+            text: "In meiner Freizeit treffe ich mich oft mit Freunden, zum Beispiel zum Wandern, da mir soziale Kontakte wichtig sind.",
+            image: "/SozialBild.jpg",
             imagePosition: "left"
         }
     ];
@@ -59,9 +60,9 @@ export default function AboutMe() {
             <div className="container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8}}
                         className="text-center mb-20"
                     >
                         <h2 className="text-5xl font-bold mb-6 text-white">
@@ -82,17 +83,17 @@ export default function AboutMe() {
                             >
                                 <div className="relative">
                                     {/* Main Content */}
-                                    <div className="relative bg-gradient-to-b from-black/75 to-black backdrop-blur-sm rounded-xl overflow-hidden">
+                                    <div
+                                        className="relative bg-gradient-to-b from-black/75 to-black backdrop-blur-sm rounded-xl overflow-hidden">
                                         <div
                                             className={`flex flex-col ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                                             {/* Section Image */}
                                             <div className="w-full md:w-1/3 relative">
                                                 <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
-                                                    <Image
+                                                    <img
                                                         src={section.image}
                                                         alt={section.title}
-                                                        fill
-                                                        className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                                        className="object-cover grayscale hover:grayscale-0 transition-all duration-700 w-full h-full"
                                                     />
                                                     <div
                                                         className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
@@ -106,7 +107,7 @@ export default function AboutMe() {
                                                     <h3 className="text-2xl font-bold text-white mb-3">
                                                         {section.title}
                                                     </h3>
-                                                    <div className="w-50 h-0.25 bg-white/30"></div>
+                                                    <div className="w-100 h-0.25 bg-white/30"></div>
                                                 </div>
                                                 <p className="text-white/90 text-base leading-relaxed tracking-wide">
                                                     {section.text}
@@ -115,8 +116,10 @@ export default function AboutMe() {
                                         </div>
                                     </div>
                                     {/* Decorative Elements */}
-                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-transparent rounded-xl -z-10"></div>
-                                    <div className="absolute -inset-0.5 bg-gradient-to-l from-white/10 to-transparent rounded-xl -z-10"></div>
+                                    <div
+                                        className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-transparent rounded-xl -z-10"></div>
+                                    <div
+                                        className="absolute -inset-0.5 bg-gradient-to-l from-white/10 to-transparent rounded-xl -z-10"></div>
                                 </div>
                             </motion.div>
                         ))}

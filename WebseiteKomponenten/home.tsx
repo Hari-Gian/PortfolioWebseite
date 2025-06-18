@@ -12,9 +12,9 @@ export default function Home() {
                     {/* Profile Picture */}
                     <motion.div
                         className="mb-8"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5 }}
+                        initial={{opacity: 0, scale: 0.8}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 0.5}}
                     >
                         <div className="relative w-60 h-60 mx-auto rounded-full overflow-hidden border-4 border-white">
                             <div className="absolute inset-0 bg-black/10"></div>
@@ -27,9 +27,9 @@ export default function Home() {
                     {/* Introduction Text */}
                     <motion.div
                         className="space-y-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5, delay: 0.2}}
                     >
                         <h1 className="text-5xl md:text-6xl font-bold text-white">
                             Hari Gian
@@ -38,15 +38,16 @@ export default function Home() {
                             Full Stack Developer
                         </h2>
                         <p className="text-white/50 max-w-2xl text-xl mx-auto">
-                            Passionate about creating innovative web solutions and turning ideas into reality through clean code and modern technologies.
+                            Passionate about creating innovative web solutions and turning ideas into reality through
+                            clean code and modern technologies.
                         </p>
                     </motion.div>
 
                     {/* Down Arrow */}
                     <motion.div
                         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{opacity: 0, y: -20}}
+                        animate={{opacity: 1, y: 0}}
                         transition={{
                             duration: 1,
                             delay: 0.5,
@@ -56,9 +57,10 @@ export default function Home() {
                         }}
                     >
                         <a href="#about" className="text-white/75 hover:text-black/50 transition-colors">
-                            <ArrowDown className="w-10 h-10" />
+                            <ArrowDown className="w-10 h-10"/>
                         </a>
                     </motion.div>
+
                 </div>
             </div>
         </div>
