@@ -172,7 +172,7 @@ export default function Contact() {
                             <Mail className="w-10 h-10" />
                         </a>
                         <a
-                            href="https://linkedin.com/in/yourusername"
+                            href="https://www.linkedin.com/in/gian-hari-259497370/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white hover:text-gray-900 transition-colors"

@@ -24,7 +24,7 @@ export default function Footer() {
                         Email ↗
                     </a>
                     <a
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/gian-hari-259497370/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition-colors duration-300"
