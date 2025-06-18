@@ -34,12 +34,12 @@ export default function Home() {
                         <h1 className="text-5xl md:text-6xl font-bold text-white">
                             Hari Gian
                         </h1>
-                        <h2 className="text-2xl text-white/75">
-                            Full Stack Developer
+                        <h2 className="text-2xl text-white/80">
+                            Schüler an der Informatikmittelschule (IMS)
                         </h2>
-                        <p className="text-white/50 max-w-2xl text-xl mx-auto">
-                            Passionate about creating innovative web solutions and turning ideas into reality through
-                            clean code and modern technologies.
+                        <p className="text-white/65 max-w-2xl text-xl mx-auto">
+                            Ich bin 17 Jahre alt, gehe aktuell an die IMS und interessiere mich besonders für
+                            Fullstack-Entwicklung und vieles mehr.
                         </p>
                     </motion.div>
 

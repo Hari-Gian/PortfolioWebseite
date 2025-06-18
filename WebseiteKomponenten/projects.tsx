@@ -1,18 +1,18 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import {motion} from 'framer-motion';
-import {Github, ExternalLink} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Github, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
     const projects = [
         {
-            title: "bla bla",
+            title: "Portfolio Webseite",
             description: "bla bla",
-            image: "/project1.jpg",
-            technologies: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-            github: "https://github.com/yourusername/project1",
-            live: "https://project1.com"
+            image: "/Portfolio.png",
+            technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML5"],
+            github: "https://github.com/Hari-Gian/PortfolioWebseite",
+            live: "https://portfolio-webseite-orcin.vercel.app"
         },
         {
             title: "bla bla",
@@ -20,7 +20,7 @@ export default function Projects() {
             image: "/project2.jpg",
             technologies: ["React", "Firebase", "Tailwind CSS"],
             github: "https://github.com/yourusername/project2",
-            live: "https://project2.com"
+            live: ""
         },
         {
             title: "bla bla",
@@ -28,7 +28,7 @@ export default function Projects() {
             image: "/project3.jpg",
             technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
             github: "https://github.com/yourusername/project3",
-            live: "https://project3.com"
+            live: ""
         }
     ];
 
@@ -39,9 +39,9 @@ export default function Projects() {
                     {/* Header */}
                     <motion.div
                         className="text-center mb-20"
-                        initial={{opacity: 0, y: -20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.5}}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
                     >
                         <h2 className="text-5xl font-bold mb-3 text-white">Projects</h2>
                         <p className="text-white text-xl ">
@@ -54,10 +54,10 @@ export default function Projects() {
                         {projects.map((project, index) => (
                             <motion.div
                                 key={project.title}
-                                initial={{opacity: 0, x: -20}}
-                                whileInView={{opacity: 1, x: 0}}
-                                transition={{duration: 0.5, delay: index * 0.1}}
-                                viewport={{once: true}}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
                                 className="group"
                             >
                                 <div
@@ -93,14 +93,16 @@ export default function Projects() {
                                                 >
                                                     <Github className="w-6 h-6"/>
                                                 </a>
-                                                <a
-                                                    href={project.live}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="text-white/75 hover:text-white transition-colors duration-300"
-                                                >
-                                                    <ExternalLink className="w-6 h-6"/>
-                                                </a>
+                                                {project.live && (
+                                                    <a
+                                                        href={project.live}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-white/75 hover:text-white transition-colors duration-300"
+                                                    >
+                                                        <ExternalLink className="w-6 h-6"/>
+                                                    </a>
+                                                )}
                                             </div>
                                         </div>
 
@@ -120,7 +122,7 @@ export default function Projects() {
                                     </div>
                                 </div>
                             </motion.div>
-                            ))}
+                        ))}
                     </div>
                 </div>
             </div>
