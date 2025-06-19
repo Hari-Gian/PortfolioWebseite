@@ -134,6 +134,9 @@
   --brand-foreground: 0 0% 95%; /* lighter gray */
 }
 
+  html {
+    scroll-behavior: smooth;
+  }
 
 
 }
