@@ -61,7 +61,7 @@ export default function Projects() {
                                 className="group"
                             >
                                 <div
-                                    className="flex flex-col md:flex-row gap-8 p-8  border border-white/50 transition-all duration-300 relative bg-gradient-to-b from-black to-blue-950 backdrop-blur-sm rounded-xl overflow-hidden">
+                                    className="flex flex-col md:flex-row gap-8 p-8  border-2 border-white/25 transition-all duration-300 relative bg-transparent backdrop-blur-sm rounded-xl shadow-lg shadow-black">
                                     {/* Project Image */}
                                     <div className="relative w-full md:w-60 h-40 flex-shrink-0">
                                         <Image

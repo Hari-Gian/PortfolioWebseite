@@ -67,7 +67,7 @@ export default function Contact() {
 
                     {/* Contact Form */}
                     <div
-                        className="bg-transparent rounded-xl p-8 shadow-lg border-2 border-white/10 hover:border-gray-300 transition-colors mb-12">
+                        className="bg-transparent rounded-xl p-8 shadow-lg shadow-black border-2 border-white/10 hover:border-gray-300 transition-colors mb-12">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-white mb-4">
