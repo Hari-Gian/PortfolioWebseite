@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
 import Image from 'next/image';
-import { FaPython, FaJs, FaHtml5, FaCss3Alt, FaJava, FaReact, FaDocker, FaAws } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiMysql, SiMongodb, SiTypescript } from 'react-icons/si';
-import { IconType } from 'react-icons';
+import {FaPython, FaJs, FaHtml5, FaCss3Alt, FaJava, FaReact, FaDocker, FaAws} from 'react-icons/fa';
+import {SiNextdotjs, SiTailwindcss, SiMysql, SiMongodb, SiTypescript} from 'react-icons/si';
+import {IconType} from 'react-icons';
 
 interface Tech {
     name: string;
@@ -21,7 +21,7 @@ export default function AboutMe() {
         {
             title: "Unihockey",
             text: "Ich spiele Unihockey seit fast 10 Jahren und gehe seitdem regelmässig zwei- bis drei mal pro Woche ins Training. " +
-                "Ich liebe diesen Sport, da ich es mir spass macht und auch anstrengend  und herausfordernd ist. " ,
+                "Ich liebe diesen Sport, da ich es mir spass macht und auch anstrengend  und herausfordernd ist. ",
             image: "/UnihockeyBild.png",
             imagePosition: "left"
         },
@@ -40,19 +40,19 @@ export default function AboutMe() {
     ];
 
     const technologies: Tech[] = [
-        { name: 'HTML5', icon: FaHtml5, color: '#E34F26' },
-        { name: 'CSS3', icon: FaCss3Alt, color: '#1572B6' },
-        { name: 'JavaScript', icon: FaJs, color: '#F7DF1E' },
-        { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-        { name: 'React', icon: FaReact, color: '#61DAFB' },
-        { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
-        { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
-        { name: 'Python', icon: FaPython, color: '#3776AB' },
-        { name: 'Java', icon: FaJava, color: '#007396' },
-        { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
-        { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-        { name: 'Docker', icon: FaDocker, color: '#2496ED' },
-        { name: 'AWS', icon: FaAws, color: '#FF9900' },
+        {name: 'HTML5', icon: FaHtml5, color: '#E34F26'},
+        {name: 'CSS3', icon: FaCss3Alt, color: '#1572B6'},
+        {name: 'JavaScript', icon: FaJs, color: '#F7DF1E'},
+        {name: 'TypeScript', icon: SiTypescript, color: '#3178C6'},
+        {name: 'React', icon: FaReact, color: '#61DAFB'},
+        {name: 'Next.js', icon: SiNextdotjs, color: '#000000'},
+        {name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4'},
+        {name: 'Python', icon: FaPython, color: '#3776AB'},
+        {name: 'Java', icon: FaJava, color: '#007396'},
+        {name: 'MySQL', icon: SiMysql, color: '#4479A1'},
+        {name: 'MongoDB', icon: SiMongodb, color: '#47A248'},
+        {name: 'Docker', icon: FaDocker, color: '#2496ED'},
+        {name: 'AWS', icon: FaAws, color: '#FF9900'},
     ];
 
     return (
@@ -84,7 +84,7 @@ export default function AboutMe() {
                                 <div className="relative">
                                     {/* Main Content */}
                                     <div
-                                        className="relative bg-gradient-to-b from-black/75 to-black backdrop-blur-sm rounded-xl overflow-hidden">
+                                        className="relative bg-gradient-to-b from-black to-blue-950 rounded-xl overflow-hidden ">
                                         <div
                                             className={`flex flex-col ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                                             {/* Section Image */}
@@ -93,7 +93,7 @@ export default function AboutMe() {
                                                     <img
                                                         src={section.image}
                                                         alt={section.title}
-                                                        className="object-cover grayscale hover:grayscale-0 transition-all duration-700 w-full h-full"
+                                                        className="object-cover transition-all duration-700 w-full h-full"
                                                     />
                                                     <div
                                                         className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
@@ -117,7 +117,7 @@ export default function AboutMe() {
                                     </div>
                                     {/* Decorative Elements */}
                                     <div
-                                        className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-transparent rounded-xl -z-10"></div>
+                                        className="absolute -inset-0.5 bg-gradient-to-r from-white/30 to-transparent rounded-xl -z-10"></div>
                                     <div
                                         className="absolute -inset-0.5 bg-gradient-to-l from-white/10 to-transparent rounded-xl -z-10"></div>
                                 </div>
@@ -127,7 +127,7 @@ export default function AboutMe() {
 
                     {/* programmiersprachen */}
                     <div className="mb-12">
-                        <h3 className="text-xl font-bold mb-4 text-center text-white border-b border-white/25 pb-2 w-full">
+                        <h3 className="text-xl font-bold mb-4 text-center text-white border-b border-white pb-2 w-full">
                             Programming Languages & Tools
                         </h3>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 max-w-4xl mx-auto">
@@ -140,10 +140,9 @@ export default function AboutMe() {
                                         whileInView={{opacity: 1, y: 0}}
                                         transition={{duration: 0.3, delay: index * 0.1}}
                                         viewport={{once: true}}
-                                        className="bg-black rounded-lg p-4 flex flex-col items-center justify-center hover:bg-gray-500 transition-all duration-300"
+                                        className="bg-blue-50/10 rounded-lg p-4 flex flex-col items-center justify-center hover:bg-gray-500 transition-all duration-300"
                                     >
-                                        <Icon
-                                            className="w-8 h-8 mb-2 text-white "
+                                        <Icon className="w-8 h-8 mb-2 text-white "
                                         />
                                         <span className="text-white text-sm font-medium">
                                             {tech.name}

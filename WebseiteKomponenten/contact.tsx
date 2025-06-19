@@ -1,7 +1,7 @@
 'use client';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import emailjs from '@emailjs/browser';
-import { Send, Loader2, Github, Mail, Linkedin } from 'lucide-react';
+import {Send, Loader2, Github, Mail, Linkedin} from 'lucide-react';
 
 interface FormData {
     name: string;
@@ -40,7 +40,7 @@ export default function Contact() {
 
             console.log('Email successfully sent!', result.text);
             setSuccess(true);
-            setFormData({ name: '', email: '', message: '' });
+            setFormData({name: '', email: '', message: ''});
         } catch (error) {
             console.error('Failed to send email:', error);
             setError('Failed to send message. Please try again later.');
@@ -50,7 +50,7 @@ export default function Contact() {
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFormData((prev: FormData) => ({
             ...prev,
             [name]: value
@@ -66,7 +66,8 @@ export default function Contact() {
                     </h2>
 
                     {/* Contact Form */}
-                    <div className=" bg-black rounded-xl p-8 shadow-lg border border-white hover:border-gray-300 transition-colors mb-12">
+                    <div
+                        className="bg-transparent rounded-xl p-8 shadow-lg border-2 border-white/10 hover:border-gray-300 transition-colors mb-12">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-white mb-4">
@@ -79,7 +80,7 @@ export default function Contact() {
                                     required
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-transparent border-2 border-gray-300 text-white placeholder-gray-300 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
                                     placeholder="Your name"
                                 />
                             </div>
@@ -95,7 +96,7 @@ export default function Contact() {
                                     required
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-transparent border-2 border-gray-300 text-white placeholder-gray-300 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
                                     placeholder="your.email@example.com"
                                 />
                             </div>
@@ -111,7 +112,7 @@ export default function Contact() {
                                     required
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border-2 border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-transparent border-2 border-gray-300 text-white placeholder-gray-300 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-colors"
                                     placeholder="Your message..."
                                 />
                             </div>
@@ -134,7 +135,7 @@ export default function Contact() {
                                 className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-medium transition-all duration-300 
                                 ${sending
                                     ? 'bg-gray-400 cursor-not-allowed'
-                                    : 'bg-black border border-white hover:bg-indigo-500 cursor-pointer'
+                                    : 'bg-blue border border-white hover:bg-indigo-500 cursor-pointer'
                                 }`}
                             >
                                 {sending ? (
@@ -161,7 +162,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="text-white hover:text-gray-900 transition-colors"
                         >
-                        <Github className="w-10 h-10" />
+                            <Github className="w-10 h-10"/>
                         </a>
                         <a
                             href="mailto:harigian545@gmail.com"
@@ -169,7 +170,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="text-white hover:text-gray-900 transition-colors"
                         >
-                            <Mail className="w-10 h-10" />
+                            <Mail className="w-10 h-10"/>
                         </a>
                         <a
                             href="https://www.linkedin.com/in/gian-hari-259497370/"
@@ -177,7 +178,7 @@ export default function Contact() {
                             rel="noopener noreferrer"
                             className="text-white hover:text-gray-900 transition-colors"
                         >
-                            <Linkedin className="w-10 h-10" />
+                            <Linkedin className="w-10 h-10"/>
                         </a>
                     </div>
                 </div>

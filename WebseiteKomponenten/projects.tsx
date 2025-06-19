@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Github, ExternalLink} from 'lucide-react';
 
 export default function Projects() {
     const projects = [
@@ -39,9 +39,9 @@ export default function Projects() {
                     {/* Header */}
                     <motion.div
                         className="text-center mb-20"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                        initial={{opacity: 0, y: -20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.5}}
                     >
                         <h2 className="text-5xl font-bold mb-3 text-white">Projects</h2>
                         <p className="text-white text-xl ">
@@ -54,14 +54,14 @@ export default function Projects() {
                         {projects.map((project, index) => (
                             <motion.div
                                 key={project.title}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
+                                initial={{opacity: 0, x: -20}}
+                                whileInView={{opacity: 1, x: 0}}
+                                transition={{duration: 0.5, delay: index * 0.1}}
+                                viewport={{once: true}}
                                 className="group"
                             >
                                 <div
-                                    className="flex flex-col md:flex-row gap-8 p-8  border border-white/75 transition-all duration-300 relative bg-gradient-to-b from-black/75 to-black backdrop-blur-sm rounded-xl overflow-hidden">
+                                    className="flex flex-col md:flex-row gap-8 p-8  border border-white/50 transition-all duration-300 relative bg-gradient-to-b from-black to-blue-950 backdrop-blur-sm rounded-xl overflow-hidden">
                                     {/* Project Image */}
                                     <div className="relative w-full md:w-60 h-40 flex-shrink-0">
                                         <Image
@@ -71,7 +71,7 @@ export default function Projects() {
                                             className="object-cover"
                                         />
                                         <div
-                                            className="absolute inset-0 bg-gradient-to-t from-white/10 via-white/30 to-transparent"></div>
+                                            className="absolute inset-0 bg-white/25 border-0 border-white"></div>
                                     </div>
 
                                     {/* Project Info */}
@@ -80,7 +80,7 @@ export default function Projects() {
                                             className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                                             <div className="w-full">
                                                 <h3 className="text-xl font-medium text-white mb-2">{project.title}</h3>
-                                                <div className="h-[0.25] w-full bg-zinc-600 mb-2"/>
+                                                <div className="h-[0.25] w-full bg-white mb-2"/>
                                                 <div className="flex items-center gap-2 text-sm text-white">
                                                 </div>
                                             </div>
