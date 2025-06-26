@@ -143,7 +143,7 @@ export default function AboutMe() {
                                     <option
                                         key={cat}
                                         value={cat}
-                                        className="bg-black text-white"
+                                        className="bg-white/10 text-black"
                                     >
                                         {cat}
                                     </option>
@@ -163,17 +163,16 @@ export default function AboutMe() {
                                         whileInView={{opacity: 1, y: 0}}
                                         transition={{duration: 0.3, delay: index * 0.1}}
                                         viewport={{once: true}}
-                                        className="bg-transparent rounded-lg p-4 flex flex-col items-center justify-center shadow-lg shadow-black/50 border border-white/25 hover:border-white transition duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1"
+                                        className="border border-white/25 hover:border-white transition-colors duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 bg-transparent rounded-lg p-4 flex flex-col items-center justify-center shadow-lg shadow-black/50"
                                     >
                                         <Icon className="w-8 h-8 mb-2 text-white"/>
-                                        <span className="text-white text-sm font-medium">
-                                            {tech.name}
-                                        </span>
+                                        <span className="text-white text-sm font-medium">{tech.name}</span>
                                     </motion.div>
-                                )
-                                    ;
+
+                                );
                             })}
                         </div>
+
                     </div>
                 </div>
             </div>

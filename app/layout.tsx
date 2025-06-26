@@ -11,6 +11,7 @@ import Projects from "../WebseiteKomponenten/projects";
 import Contact from "../WebseiteKomponenten/contact";
 import { cn } from "@/lib/utils";
 import { Glow } from "@/others/glow";
+import('tailwindcss')
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
