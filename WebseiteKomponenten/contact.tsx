@@ -67,7 +67,7 @@ export default function Contact() {
 
                     {/* Contact Form */}
                     <div
-                        className="bg-transparent rounded-xl p-8 shadow-lg shadow-black border-2 border-white/10 hover:border-gray-300 transition-colors mb-12">
+                        className="bg-transparent rounded-xl p-8 shadow-lg shadow-black border-2 border-white/25 hover:border-white/50 transition-colors mb-12">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-white mb-4">
@@ -135,7 +135,7 @@ export default function Contact() {
                                 className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-medium transition-all duration-300 
                                 ${sending
                                     ? 'bg-gray-400 cursor-not-allowed'
-                                    : 'bg-blue border border-white hover:bg-indigo-500 cursor-pointer'
+                                    : 'bg-blue border border-white hover:bg-white/25 cursor-pointer'
                                 }`}
                             >
                                 {sending ? (
@@ -160,7 +160,7 @@ export default function Contact() {
                             href="https://github.com/Hari-Gian"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white hover:text-gray-900 transition-colors"
+                            className="text-white/75 hover:text-white transition-colors"
                         >
                             <Github className="w-10 h-10"/>
                         </a>
@@ -168,7 +168,7 @@ export default function Contact() {
                             href="mailto:harigian545@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white hover:text-gray-900 transition-colors"
+                            className="text-white/75 hover:text-white transition-colors"
                         >
                             <Mail className="w-10 h-10"/>
                         </a>
@@ -176,7 +176,7 @@ export default function Contact() {
                             href="https://www.linkedin.com/in/gian-hari-259497370/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white hover:text-gray-900 transition-colors"
+                            className="text-white/75 hover:text-white transition-colors"
                         >
                             <Linkedin className="w-10 h-10"/>
                         </a>

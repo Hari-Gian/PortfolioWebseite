@@ -39,21 +39,31 @@ export default function AboutMe() {
         }
     ];
 
-    const technologies: Tech[] = [
-        {name: 'HTML5', icon: FaHtml5, color: '#E34F26'},
-        {name: 'CSS3', icon: FaCss3Alt, color: '#1572B6'},
-        {name: 'JavaScript', icon: FaJs, color: '#F7DF1E'},
-        {name: 'TypeScript', icon: SiTypescript, color: '#3178C6'},
-        {name: 'React', icon: FaReact, color: '#61DAFB'},
-        {name: 'Next.js', icon: SiNextdotjs, color: '#000000'},
-        {name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4'},
-        {name: 'Python', icon: FaPython, color: '#3776AB'},
-        {name: 'Java', icon: FaJava, color: '#007396'},
-        {name: 'MySQL', icon: SiMysql, color: '#4479A1'},
-        {name: 'MongoDB', icon: SiMongodb, color: '#47A248'},
-        {name: 'Docker', icon: FaDocker, color: '#2496ED'},
-        {name: 'AWS', icon: FaAws, color: '#FF9900'},
-    ];
+    const technologiesFilter = [
+        {name: 'HTML5', icon: FaHtml5, category: "Frontend"},
+        {name: 'CSS3', icon: FaCss3Alt, category: "Frontend"},
+        {name: 'JavaScript', icon: FaJs, category: "Frontend"},
+        {name: 'TypeScript', icon: SiTypescript, category: "Frontend"},
+        {name: 'React', icon: FaReact, category: "Frontend"},
+        {name: 'Next.js', icon: SiNextdotjs, category: "Frontend"},
+        {name: 'Tailwind CSS', icon: SiTailwindcss, category: "Frontend"},
+        {name: 'Python', icon: FaPython, category: "Backend"},
+        {name: 'Java', icon: FaJava, category: "Backend"},
+        {name: 'MySQL', icon: SiMysql, category: "Database"},
+        {name: 'MongoDB', icon: SiMongodb, category: "Database"},
+        {name: 'Docker', icon: FaDocker, category: "DevOps"},
+        {name: 'AWS', icon: FaAws, category: "DevOps"},
+    ]
+
+    // Zustand für Filter
+    const [filter, setFilter] = useState("All");
+    const categories = ["All", "Frontend", "Backend", "Database", "DevOps"];
+
+    // Gefilterte Technologien
+    const filteredTechnologies =
+        filter === "All"
+            ? technologiesFilter
+            : technologiesFilter.filter((tech) => tech.category === filter);
 
     return (
         <div id="about" className="min-h-screen text-black py-20">
@@ -82,12 +92,10 @@ export default function AboutMe() {
                                 className="group max-w-4xl mx-auto"
                             >
                                 <div className="relative">
-                                    {/* Main Content */}
                                     <div
-                                        className="relative bg-transparent rounded-xl overflow-hidden border-2 border-white/25 shadow-lg shadow-black">
+                                        className="relative bg-transparent rounded-xl overflow-hidden border-2 border-white/25 hover:border-white/50 shadow-lg shadow-black">
                                         <div
                                             className={`flex flex-col ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
-                                            {/* Section Image */}
                                             <div className="w-full md:w-1/3 relative">
                                                 <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
                                                     <img
@@ -99,7 +107,6 @@ export default function AboutMe() {
                                                         className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
                                                 </div>
                                             </div>
-                                            {/* Section Info */}
                                             <div className="w-full md:w-2/3 p-9 flex flex-col justify-center relative">
                                                 <div
                                                     className="absolute top-1/2 -translate-y-1/2 left-0 w-1 h-full bg-gradient-to-b from-white to-white/10"></div>
@@ -120,13 +127,34 @@ export default function AboutMe() {
                         ))}
                     </div>
 
-                    {/* programmiersprachen */}
+                    {/* Gefilterte Technologien */}
                     <div className="mb-12">
-                        <h3 className="text-xl font-bold mb-4 text-center text-white border-b border-white pb-2 w-full">
+                        <h3 className="text-xl font-semibold text-center text-white border-b border-white/75 pb-1 w-fit mx-auto">
                             Programming Languages & Tools
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 max-w-4xl mx-auto">
-                            {technologies.map((tech, index) => {
+
+                        <div className="flex justify-center mt-6 mb-12">
+                            <select
+                                className="bg-transparent border border-white/50 text-white px-4 py-2 rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-white"
+                                value={filter}
+                                onChange={(e) => setFilter(e.target.value)}
+                            >
+                                {categories.map((cat) => (
+                                    <option
+                                        key={cat}
+                                        value={cat}
+                                        className="bg-black text-white"
+                                    >
+                                        {cat}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
+
+                        <div
+                            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 max-w-4xl mx-auto w-full">
+                            {filteredTechnologies.map((tech, index) => {
                                 const Icon = tech.icon;
                                 return (
                                     <motion.div
@@ -135,15 +163,15 @@ export default function AboutMe() {
                                         whileInView={{opacity: 1, y: 0}}
                                         transition={{duration: 0.3, delay: index * 0.1}}
                                         viewport={{once: true}}
-                                        className="bg-transparent rounded-lg p-4 flex flex-col items-center justify-center shadow-lg shadow-black/50 border-1 border-white/25"
+                                        className="bg-transparent rounded-lg p-4 flex flex-col items-center justify-center shadow-lg shadow-black/50 border border-white/25 hover:border-white transition duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1"
                                     >
-                                        <Icon className="w-8 h-8 mb-2 text-white "
-                                        />
+                                        <Icon className="w-8 h-8 mb-2 text-white"/>
                                         <span className="text-white text-sm font-medium">
                                             {tech.name}
                                         </span>
                                     </motion.div>
-                                );
+                                )
+                                    ;
                             })}
                         </div>
                     </div>

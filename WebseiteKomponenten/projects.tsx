@@ -12,7 +12,7 @@ export default function Projects() {
             image: "/Portfolio.png",
             technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML5"],
             github: "https://github.com/Hari-Gian/PortfolioWebseite",
-            live: "https://portfolio-webseite-orcin.vercel.app"
+            live: "https://portfolio-webseite-1.vercel.app/"
         },
         {
             title: "bla bla",
@@ -61,17 +61,18 @@ export default function Projects() {
                                 className="group"
                             >
                                 <div
-                                    className="flex flex-col md:flex-row gap-8 p-8  border-2 border-white/25 transition-all duration-300 relative bg-transparent backdrop-blur-sm rounded-xl shadow-lg shadow-black">
+                                    className="flex flex-col md:flex-row gap-8 p-8  border-2 border-white/25 hover:border-white/50 transition-all duration-300 relative bg-transparent backdrop-blur-sm rounded-xl shadow-lg shadow-black">
                                     {/* Project Image */}
-                                    <div className="relative w-full md:w-60 h-40 flex-shrink-0">
-                                        <Image
-                                            src={project.image}
-                                            alt={project.title}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                        <div
-                                            className="absolute inset-0 bg-white/25 border-0 border-white"></div>
+                                    <div className="w-full md:w-1/3 relative">
+                                        <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
+                                            <img
+                                                src={project.image}
+                                                alt={project.title}
+                                                className="object-cover transition-all duration-700 w-full h-full"
+                                            />
+                                            <div
+                                                className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+                                        </div>
                                     </div>
 
                                     {/* Project Info */}
@@ -113,7 +114,7 @@ export default function Projects() {
                                             {project.technologies.map((tech) => (
                                                 <span
                                                     key={tech}
-                                                    className="px-3 py-1 bg-white/75 text-gray text-xs"
+                                                    className="px-3 py-1 bg-white/75 text-gray text-xs rounded-full"
                                                 >
                                                     {tech}
                                                 </span>
