@@ -37,7 +37,7 @@ export default function Home() {
                         </h2>
                         <p className="text-white/65 max-w-2xl text-xl mx-auto">
                             Ich bin 17 Jahre alt, gehe aktuell an die IMS und interessiere mich besonders für
-                            Fullstack-Entwicklung und vieles mehr.
+                            Fullstack-Entwicklung und anderes.
                         </p>
                     </motion.div>
 
