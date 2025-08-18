@@ -12,7 +12,7 @@ export default function Projects() {
             image: "/Portfolio.png",
             technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML5"],
             github: "https://github.com/Hari-Gian/PortfolioWebseite",
-            live: "https://portfolio-webseite-1.vercel.app/"
+            live: "https://harigian.com"
         },
         {
             title: "bla bla",
