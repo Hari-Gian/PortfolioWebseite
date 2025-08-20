@@ -8,7 +8,8 @@ export default function Projects() {
     const projects = [
         {
             title: "Portfolio Webseite",
-            description: "bla bla",
+            description: "Dies ist meine persönliche Portfolio-Webseite, die mich und meine Projekte präsentiert. Entwickelt" +
+                " mit Next.js, Tailwind CSS, HTML und JavaScript und gehostet über Vercel.",
             image: "/Portfolio.png",
             technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML5"],
             github: "https://github.com/Hari-Gian/PortfolioWebseite",
@@ -16,26 +17,30 @@ export default function Projects() {
         },
         {
             title: "PRWR Facharbeit",
-            description: "bla bla",
+            description: "Dieses Gruppenprojekt entstand im Rahmen eines Schulauftrags und vergleicht Start-ups in Zürich " +
+                "mit dem Silicon Valley. Die Website wurde mit HTML, Tailwind CSS und JavaScript umgesetzt und erhielt dank" +
+                " ihrer Umsetzung und der ausführlichen Dokumentation die Note 5.5.",
             image: "/PRWRFacharbeit.png",
-            technologies: ["HTML", "Tailwind CSS", "Javascript"],
+            technologies: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
             github: "https://github.com/Hari-Gian/PRWR_Facharbeit",
             live: "https://start-up-szene-zh-vs-sv.vercel.app/"
         },
         {
-            title: "bla bla",
-            description: "bla bla",
-            image: "/project3.jpg",
-            technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-            github: "https://github.com/yourusername/project3",
+            title: "Login System",
+            description: "LoginSystem ist ein einfaches Webprojekt, das die Benutzeranmeldung und -authentifizierung ermöglicht." +
+                " Es verwendet Node.js und Express für das Backend, HTML, CSS und JavaScript für die Benutzeroberfläche sowie" +
+                " MySQL (über XAMPP) als Datenbank ",
+            image: "/LoginSystem.png",
+            technologies: ["HTML5", "CSS", "JavaScript", "Node.js", "MySql"],
+            github: "https://github.com/Hari-Gian/LoginSystem",
             live: ""
         },
         {
-            title: "bla bla",
+            title: "Wetter Webseite",
             description: "bla bla",
             image: "/project3.jpg",
-            technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-            github: "https://github.com/yourusername/project3",
+            technologies: ["HTML5", "CSS", "Python", "Flask"],
+            github: "https://github.com/Hari-Gian/Weather-website",
             live: ""
         }
     ];
@@ -71,17 +76,17 @@ export default function Projects() {
                                 <div
                                     className="flex flex-col md:flex-row gap-8 p-8  border-2 border-white/25 hover:border-white/50 transition-all duration-300 relative bg-transparent backdrop-blur-sm rounded-xl shadow-lg shadow-black">
                                     {/* Project Image */}
-                                    <div className="w-full md:w-1/3 relative">
-                                        <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
+                                    <div className="w-full md:w-1/3 flex-shrink-0">
+                                        <div
+                                            className="relative aspect-[4/3] md:h-48 lg:h-56 w-full">
                                             <img
                                                 src={project.image}
                                                 alt={project.title}
-                                                className="object-cover transition-all duration-700 w-full h-full"
+                                                className="object-cover w-full h-full rounded-xl"
                                             />
-                                            <div
-                                                className="absolute inset-0 bg-gradient-to-r to-transparent"></div>
                                         </div>
                                     </div>
+
 
                                     {/* Project Info */}
                                     <div className="flex-grow">
