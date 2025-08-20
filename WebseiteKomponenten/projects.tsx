@@ -8,7 +8,7 @@ export default function Projects() {
     const projects = [
         {
             title: "Portfolio Webseite",
-            description: "Dies ist meine persönliche Portfolio-Webseite, die mich und meine Projekte präsentiert. Entwickelt" +
+            description: "Dies ist meine persönliche Portfolio-Webseite, auf der ich mich und meine Projekte präsentiere. Entwickelt habe ich sie" +
                 " mit Next.js, Tailwind CSS, HTML und JavaScript und gehostet über Vercel.",
             image: "/Portfolio.png",
             technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Framer Motion", "HTML5"],
@@ -37,8 +37,8 @@ export default function Projects() {
         },
         {
             title: "Wetter Webseite",
-            description: "bla bla",
-            image: "/project3.jpg",
+            description: "Eine Wetter-Website, die aktuelle Wetterdaten anzeigt, entwickelt mit HTML, CSS, Python und Flask.",
+            image: "/WetterBild.png",
             technologies: ["HTML5", "CSS", "Python", "Flask"],
             github: "https://github.com/Hari-Gian/Weather-website",
             live: ""

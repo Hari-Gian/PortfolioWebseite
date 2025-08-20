@@ -37,7 +37,7 @@ export default function Home() {
                             Ich bin 17 Jahre alt und besuche aktuell die Informatikmittelschule (IMS) in Zürich.
                         </h2>
                         <p className="text-white/65 max-w-2xl text-xl mx-auto">
-                            Besonders interessiere ich mich für Fullstack-Entwicklung, mit Schwerpunkt auf Frontend.
+                            Besonders interessiere ich mich für die Fullstack-Entwicklung mit Schwerpunkt auf Frontend.
                             Neben der Schule arbeite ich an einigen Projekten, um mein Wissen zu vertiefen und Neues auszuprobieren.
                         </p>
                     </motion.div>
