@@ -15,11 +15,19 @@ export default function Projects() {
             live: "https://harigian.com"
         },
         {
+            title: "PRWR Facharbeit",
+            description: "bla bla",
+            image: "/PRWRFacharbeit.png",
+            technologies: ["HTML", "Tailwind CSS", "Javascript"],
+            github: "https://github.com/Hari-Gian/PRWR_Facharbeit",
+            live: "https://start-up-szene-zh-vs-sv.vercel.app/"
+        },
+        {
             title: "bla bla",
             description: "bla bla",
-            image: "/project2.jpg",
-            technologies: ["React", "Firebase", "Tailwind CSS"],
-            github: "https://github.com/yourusername/project2",
+            image: "/project3.jpg",
+            technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+            github: "https://github.com/yourusername/project3",
             live: ""
         },
         {
@@ -71,7 +79,7 @@ export default function Projects() {
                                                 className="object-cover transition-all duration-700 w-full h-full"
                                             />
                                             <div
-                                                className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+                                                className="absolute inset-0 bg-gradient-to-r to-transparent"></div>
                                         </div>
                                     </div>
 

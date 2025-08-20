@@ -18,11 +18,11 @@ export default function Home() {
                     >
                         <div className="relative w-60 h-60 mx-auto rounded-full overflow-hidden border-4 border-white/50">
                             <div className="absolute inset-0 bg-black/10"></div>
-                            <img src="/PortfolioBild.jpg" alt="Portfolio Bild" className="w-full h-full object-cover"/>
+                            <img src="/PortfolioBild.jpg" alt="Portfolio Bild" className="w-full h-full object-cover object-center"/>
                         </div>
                     </motion.div>
 
-                    {/* Introduction Text */}
+                    {/* vorstellungs Text */}
                     <motion.div
                         className="space-y-6"
                         initial={{opacity: 0, y: 20}}
@@ -33,11 +33,11 @@ export default function Home() {
                             Hari Gian
                         </h1>
                         <h2 className="text-2xl text-white/80">
-                            Schüler an der Informatikmittelschule (IMS)
+                            Ich bin 17 Jahre alt und besuche aktuell die Informatikmittelschule (IMS) in Zürich.
                         </h2>
                         <p className="text-white/65 max-w-2xl text-xl mx-auto">
-                            Ich bin 17 Jahre alt, gehe aktuell an die IMS und interessiere mich besonders für
-                            Fullstack-Entwicklung und anderes.
+                            Besonders interessiere ich mich für Fullstack-Entwicklung, mit Schwerpunkt auf Frontend.
+                            Neben der Schule arbeite ich an einigen Projekten, um mein Wissen zu vertiefen und Neues auszuprobieren.
                         </p>
                     </motion.div>
 

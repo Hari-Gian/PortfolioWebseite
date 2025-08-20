@@ -41,6 +41,7 @@ export default function RootLayout() {
         <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
           <Glow variant="center" className="opacity-50 scale-125 blur-3xl" />
         </div>
+        <link rel="icon" href="/PortfolioBild.jpg" />
 
         <div className="flex flex-col min-h-screen relative z-10">
           <Header />

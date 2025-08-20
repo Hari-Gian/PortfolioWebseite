@@ -79,7 +79,11 @@ const Navbar = () => {
                 <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
                     {/* Logo */}
                     <a
-                        href="#home"
+                        href="#"
+                        onClick={(event) => {
+                            event.preventDefault();
+                            window.location.reload();
+                        }}
                         className="hover:opacity-80 transition-opacity"
                     >
                         <TextShimmer duration={4} spread={2}>
