@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import Image from 'next/image';
-import { FaPython, FaJs, FaHtml5, FaCss3Alt, FaJava, FaReact, FaDocker, FaAws, FaNode, FaFlask} from 'react-icons/fa';
+import {FaPython, FaJs, FaHtml5, FaCss3Alt, FaJava, FaReact, FaDocker, FaAws, FaNode, FaFlask} from 'react-icons/fa';
 import {SiNextdotjs, SiTailwindcss, SiMysql, SiMongodb, SiTypescript} from 'react-icons/si';
 import {IconType} from 'react-icons';
 
@@ -20,25 +20,29 @@ export default function AboutMe() {
     const aboutSections = [
         {
             title: "Unihockey",
-            text: "Ich spiele Unihockey seit fast 10 Jahren und gehe seitdem regelmässig drei mal pro Woche ins Training. " +
-                  "Ich liebe diesen Sport, da ich es mir spass macht und auch anstrengend  und herausfordernd ist. ",
+            text: "Ich spiele Unihockey seit fast 10 Jahren und trainiere regelmässig zwei- bis dreimal pro Woche. Während meiner Zeit im Leistungsbereich " +
+                "beim UHC Uster konnte ich viele wertvolle Erfahrungen sammeln und mich sportlich wie auch persönlich weiterentwickeln. Ein besonderes " +
+                "Highlight war der Sieg bei den Prague Games, einem der grössten internationalen Jugendturniere.",
             image: "/UnihockeyBild.png",
             imagePosition: "left"
         },
         {
             title: "Gym",
-            text: "Ich gehe ein- bis zweimal pro Woche ins Fitnessstudio. Dort trainiere ich immer mit Freunden, wodurch " +
-                  "wir uns gegenseitig motivieren und anspornen. Das Training im Gym ist – wie auch Unihockey – ein wichtiger Ausgleich zum schulischen Alltag.",
+            text: "Neben dem Unihockey gehe ich ein- bis zweimal pro Woche ins Fitnessstudio. Dort trainiere ich immer mit Freunden, wodurch " +
+                "wir uns gegenseitig motivieren und anspornen. Das Training im Gym ist – wie auch Unihockey – ein wichtiger Ausgleich zum " +
+                "schulischen Alltag.",
             image: "/GymBild.jpg",
             imagePosition: "left"
         },
         {
             title: "Mit Freunden etwas unternehmen",
-            text: "In meiner Freizeit treffe ich mich oft mit Freunden, zum Beispiel zum Wandern, da mir soziale Kontakte wichtig sind.",
+            text: "In meiner Freizeit treffe ich mich gerne mit Freunden, zum Beispiel zum Wandern, ins Kino gehen oder einfach " +
+                "zum Austausch über gemeinsame Interessen. Soziale Kontakte sind mir wichtig, da sie mir helfen, neue Perspektiven " +
+                "zu gewinnen und gemeinsam schöne Erlebnisse zu teilen.",
             image: "/SozialBild.jpg",
             imagePosition: "left"
         }
-    ];
+    ]
 
     const technologiesFilter = [
         {name: 'HTML5', icon: FaHtml5, category: "Frontend"},
@@ -101,13 +105,15 @@ export default function AboutMe() {
                                             className={`flex flex-col ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                                             <div className="w-full md:w-1/3 relative">
                                                 <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
-                                                    <img src={section.image} alt={section.title} className="object-cover transition-all duration-700 w-full h-full"/>
+                                                    <img src={section.image} alt={section.title}
+                                                         className="object-cover transition-all duration-700 w-full h-full"/>
                                                     <div
                                                         className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-2/3 p-9 flex flex-col justify-center relative">
-                                                <div className="absolute top-1/2 -translate-y-1/2 left-0 w-1 h-full bg-gradient-to-b from-white to-white/10"></div>
+                                                <div
+                                                    className="absolute top-1/2 -translate-y-1/2 left-0 w-1 h-full bg-gradient-to-b from-white to-white/10"></div>
                                                 <div className="mb-5">
                                                     <h3 className="text-2xl font-bold text-white mb-3">
                                                         {section.title}
