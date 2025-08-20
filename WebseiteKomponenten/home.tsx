@@ -16,9 +16,10 @@ export default function Home() {
                         animate={{opacity: 1, scale: 1}}
                         transition={{duration: 0.5}}
                     >
-                        <div className="relative w-60 h-60 mx-auto rounded-full overflow-hidden border-4 border-white/50">
+                        <div
+                            className="relative w-60 h-60 mx-auto rounded-full overflow-hidden border-4 border-white/50">
                             <div className="absolute inset-0 bg-black/10"></div>
-                            <img src="/PortfolioBild.jpg" alt="Portfolio Bild" className="w-full h-full object-cover object-center"/>
+                            <img src="/PortfolioBild.jpg" alt="Portfolio Bild" className="w-full h-full object-cover object-[center_30%]"/>
                         </div>
                     </motion.div>
 

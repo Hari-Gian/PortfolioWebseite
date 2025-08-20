@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import Image from 'next/image';
-import {FaPython, FaJs, FaHtml5, FaCss3Alt, FaJava, FaReact, FaDocker, FaAws} from 'react-icons/fa';
+import { FaPython, FaJs, FaHtml5, FaCss3Alt, FaJava, FaReact, FaDocker, FaAws, FaNode, FaFlask} from 'react-icons/fa';
 import {SiNextdotjs, SiTailwindcss, SiMysql, SiMongodb, SiTypescript} from 'react-icons/si';
 import {IconType} from 'react-icons';
 
@@ -20,14 +20,15 @@ export default function AboutMe() {
     const aboutSections = [
         {
             title: "Unihockey",
-            text: "Ich spiele Unihockey seit fast 10 Jahren und gehe seitdem regelmässig zwei- bis drei mal pro Woche ins Training. " +
-                "Ich liebe diesen Sport, da ich es mir spass macht und auch anstrengend  und herausfordernd ist. ",
+            text: "Ich spiele Unihockey seit fast 10 Jahren und gehe seitdem regelmässig drei mal pro Woche ins Training. " +
+                  "Ich liebe diesen Sport, da ich es mir spass macht und auch anstrengend  und herausfordernd ist. ",
             image: "/UnihockeyBild.png",
             imagePosition: "left"
         },
         {
             title: "Gym",
-            text: "Ich gehe ein- bis zweimal pro Woche neben dem Unihockey ins Fitnessstudio. Dabei trainiere ich meistens mit Freunden, sodass wir uns gegenseitig unterstützen und motivieren können.",
+            text: "Ich gehe ein- bis zweimal pro Woche ins Fitnessstudio. Dort trainiere ich immer mit Freunden, wodurch " +
+                  "wir uns gegenseitig motivieren und anspornen. Das Training im Gym ist – wie auch Unihockey – ein wichtiger Ausgleich zum schulischen Alltag.",
             image: "/GymBild.jpg",
             imagePosition: "left"
         },
@@ -48,7 +49,9 @@ export default function AboutMe() {
         {name: 'Next.js', icon: SiNextdotjs, category: "Frontend"},
         {name: 'Tailwind CSS', icon: SiTailwindcss, category: "Frontend"},
         {name: 'Python', icon: FaPython, category: "Backend"},
+        {name: 'Flask', icon: FaFlask, category: "Backend"},
         {name: 'Java', icon: FaJava, category: "Backend"},
+        {name: 'Node.js', icon: FaNode, category: "Backend"},
         {name: 'MySQL', icon: SiMysql, category: "Database"},
         {name: 'MongoDB', icon: SiMongodb, category: "Database"},
         {name: 'Docker', icon: FaDocker, category: "DevOps"},
@@ -98,18 +101,13 @@ export default function AboutMe() {
                                             className={`flex flex-col ${section.imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                                             <div className="w-full md:w-1/3 relative">
                                                 <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
-                                                    <img
-                                                        src={section.image}
-                                                        alt={section.title}
-                                                        className="object-cover transition-all duration-700 w-full h-full"
-                                                    />
+                                                    <img src={section.image} alt={section.title} className="object-cover transition-all duration-700 w-full h-full"/>
                                                     <div
                                                         className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-2/3 p-9 flex flex-col justify-center relative">
-                                                <div
-                                                    className="absolute top-1/2 -translate-y-1/2 left-0 w-1 h-full bg-gradient-to-b from-white to-white/10"></div>
+                                                <div className="absolute top-1/2 -translate-y-1/2 left-0 w-1 h-full bg-gradient-to-b from-white to-white/10"></div>
                                                 <div className="mb-5">
                                                     <h3 className="text-2xl font-bold text-white mb-3">
                                                         {section.title}
