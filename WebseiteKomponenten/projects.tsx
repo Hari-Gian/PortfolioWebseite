@@ -16,6 +16,15 @@ export default function Projects() {
             live: "https://harigian.com"
         },
         {
+            title: "NoteTrack (1. Platz beim KSH Hackathon)",
+            description: "NoteTrack ist eine Webanwendung, die Schüler:innen hilft, ihre Prüfungen und Noten im Blick zu behalten." +
+                        " Man trägt Prüfungen ein und bekommt Erinnerungen, um Noten einzutragen. So behält man leicht den Überblick über seine Noten.",
+            image: "/NoteTrack.png",
+            technologies: ["TypeScript", "JavaScript", "Tailwind CSS"],
+            github: "https://github.com/danielecitran/NoteTrack",
+            live: "https://note-track-deploy.vercel.app"
+        },
+        {
             title: "PRWR Facharbeit",
             description: "Dieses Gruppenprojekt entstand im Rahmen eines Schulauftrags und vergleicht Start-ups in Zürich " +
                 "mit dem Silicon Valley. Die Website wurde mit HTML, Tailwind CSS und JavaScript umgesetzt und erhielt dank" +
@@ -56,9 +65,9 @@ export default function Projects() {
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.5}}
                     >
-                        <h2 className="text-5xl font-bold mb-3 text-white">Projects</h2>
+                        <h2 className="text-5xl font-bold mb-3 text-white">Projekten</h2>
                         <p className="text-white text-xl ">
-                            A showcase of my professional work and technical expertise.
+                            Meine Relevantesten Projekten
                         </p>
                     </motion.div>
 
