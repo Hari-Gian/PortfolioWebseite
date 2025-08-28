@@ -65,9 +65,9 @@ export default function Projects() {
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.5}}
                     >
-                        <h2 className="text-5xl font-bold mb-3 text-white">Projekten</h2>
+                        <h2 className="text-5xl font-bold mb-3 text-white">Projekte</h2>
                         <p className="text-white text-xl ">
-                            Meine Relevantesten Projekten
+                            Meine relevantesten Projekte
                         </p>
                     </motion.div>
 
