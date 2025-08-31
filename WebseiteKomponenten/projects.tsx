@@ -51,6 +51,14 @@ export default function Projects() {
             technologies: ["HTML5", "CSS", "Python", "Flask"],
             github: "https://github.com/Hari-Gian/Weather-website",
             live: ""
+        },
+        {
+            title: "Lern APP",
+            description: "Eine Lern-App zur Verbesserung deiner Englischkenntnisse mit drei Schwierigkeitsstufen, entwickelt im Rahmen eines Coding-Contests bei Andeo.",
+            image: "/LernAPP.png",
+            technologies: ["JavaScript", "PostgreSQL", "HTML5", "Tailwind CSS", "Node.js"],
+            github: "https://github.com/Hari-Gian/LernApp",
+            live: ""
         }
     ];
 
