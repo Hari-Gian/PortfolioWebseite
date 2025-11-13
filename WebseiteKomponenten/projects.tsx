@@ -63,7 +63,7 @@ export default function Projects() {
         {
             title: "BruteForceAttack",
             description: "Das Projekt demonstriert die Funktionsweise von Brute-Force-Angriffen und mögliche Abwehrstrategien. Mein Teamkollege und ich erhielten dafür im Schulprojekt die Note 6; ich habe dabei grösstenteils den Angriff umgesetzt.",
-            image: "/BruteForcepicture.png",
+            image: "/bruteforcepicture.png",
             technologies: ["JavaScript", "Node.js", "TypeScript", "Next.js"],
             github: "https://github.com/Hari-Gian/BruteForceAttack",
         }
